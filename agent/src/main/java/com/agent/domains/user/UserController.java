@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import lombok.RequiredArgsConstructor;
 
@@ -26,12 +27,11 @@ public class UserController {
 	}
 	
 	@GetMapping("/list")
+	@ResponseBody	
 	public Map<String,Object> list(@RequestParam Map<String,Object> params) {
 		Map<String,Object> res = new HashMap<String,Object>();
 		List<Map<String,Object>> list = userService.selectUserList(params);
 		res.put("list", list);
 		return res;
 	}
-	
-	
 }
