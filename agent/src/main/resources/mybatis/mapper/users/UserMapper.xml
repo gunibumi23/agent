@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">  
+	<mapper namespace="com.agent.domains.user.UserMapper">
+	<sql id="selectUserQuery">
+		SELECT 
+			   A.USER_CD
+			  ,A.USER_PW
+			  ,A.USER_NM
+			  ,A.USER_STS
+			  ,A.TEAM_CD
+			  ,A.USER_PH
+			  ,A.USE_YN
+			  ,A.DEL_YN
+			  ,DATE_FORMAT(A.CREATED_DT,'%Y-%m-%d %H:%i:%s') CREATED_DT
+			  ,A.CREATED_CD
+			  ,(SELECT USER_NM FROM USERS WHERE USER_CD = A.CREATED_CD) CREATED_NM
+			  ,DATE_FORMAT(A.UPDATED_DT,'%Y-%m-%d %H:%i:%s') UPDATED_DT
+			  ,A.UPDATED_CD
+			  ,(SELECT USER_NM FROM USERS WHERE USER_CD = A.UPDATED_CD) UPDATED_NM
+		FROM USERS A		
+	</sql>
+	
+	<select id="selectUserList" parameterType="agentMap" resultType="agentMap">
+		<!-- selectUserList -->
+		<include refid="selectUserQuery"></include>
+		<where>
+			<if test="userCd != '' and userCd != null">
+				A.USER_CD = #{userCd}
+			</if>
+			<if test="userNm != '' and userNm != null">
+				A.USER_NM = #{userNm}
+			</if>
+			<if test="teamCd != '' and teamCd != null">
+				A.TEAM_CD = #{teamCd}
+			</if>
+			<if test="userPh != '' and userPh != null">
+				A.USER_PH = #{userPh}
+			</if>			
+			<if test="useYn != '' and useYn != null">
+				A.USE_YN = #{useYn}
+			</if>
+			<if test="delYn != '' and delYn != null">
+				A.DEL_YN = #{delYn}
+			</if>
+			<if test="userSts != '' and userSts != null">
+				A.USER_STS = #{userSts}
+			</if>
+		</where>
+		ORDER BY A.USER_CD 
+	</select>
+	
+	<select id="selectUserInfo" parameterType="agentMap" resultType="agentMap">
+		<include refid="selectUserQuery"></include>
+		WHERE USER_CD = #{userCd}
+	</select>
+</mapper>
