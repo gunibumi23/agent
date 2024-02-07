@@ -34,16 +34,28 @@ public class AgentDbAdvice {
     TransactionInterceptor txAdvice() {
 
         TransactionInterceptor txAdvice = new TransactionInterceptor();
-
+        
+        DefaultTransactionAttribute readAttr = new DefaultTransactionAttribute(TransactionDefinition.PROPAGATION_REQUIRED);
+        readAttr.setReadOnly(true);
+        readAttr.setTimeout(TX_METHOD_TIMEOUT);
+        
+        
         List<RollbackRuleAttribute> rollbackRules = new ArrayList<>();
         rollbackRules.add(new RollbackRuleAttribute(Exception.class));
 
-        DefaultTransactionAttribute attr = new RuleBasedTransactionAttribute(TransactionDefinition.PROPAGATION_REQUIRED, rollbackRules);
-        attr.setTimeout(TX_METHOD_TIMEOUT);
+        DefaultTransactionAttribute transAttr = new RuleBasedTransactionAttribute(TransactionDefinition.PROPAGATION_REQUIRED, rollbackRules);
+        transAttr.setTimeout(TX_METHOD_TIMEOUT);
         
-        String strAttr = attr.toString();
+        String strReadAttr  = readAttr.toString();
+        String strTransAttr = transAttr.toString();
+        
         Properties txAttr = new Properties();
-        txAttr.setProperty("*", strAttr);
+        
+        txAttr.setProperty("select", strReadAttr);        
+        txAttr.setProperty("update", strTransAttr);
+        txAttr.setProperty("insert", strTransAttr);
+        txAttr.setProperty("delete", strTransAttr);
+        txAttr.setProperty("merge" , strTransAttr);
 
         txAdvice.setTransactionAttributes(txAttr);
         txAdvice.setTransactionManager(txManager);

@@ -4,8 +4,11 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -13,39 +16,49 @@ import org.springframework.security.config.annotation.web.configurers.AbstractHt
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.web.DefaultRedirectStrategy;
-import org.springframework.security.web.RedirectStrategy;
+import org.springframework.security.web.AuthenticationEntryPoint;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.AuthenticationFailureHandler;
 import org.springframework.security.web.authentication.SimpleUrlAuthenticationSuccessHandler;
 import org.springframework.security.web.authentication.logout.LogoutSuccessHandler;
-import org.springframework.security.web.savedrequest.HttpSessionRequestCache;
-import org.springframework.security.web.savedrequest.RequestCache;
 
+import com.agent.common.data.ResultData;
+import com.agent.common.enums.ApiResultEnum;
 import com.agent.common.enums.LoginFailureEnum;
 import com.agent.common.enums.ResCodeEnum;
 import com.agent.common.util.ObjectUtil;
 
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import jakarta.servlet.http.HttpSession;
 import lombok.extern.slf4j.Slf4j;
 
 @Configuration
 @EnableWebSecurity
+@EnableCaching
 @Slf4j
 public class AgentWebSecurity {
 	
+	private final String LOGIN_OUT   = "/logout";
+	private final String LOGIN_FORM  = "/login/form";
+	private final String LOGIN_CHECK = "/login/check";
+	
 	private final String[] SKIP_URL = new String[]{"/vendor/**"
 												  ,"/css/**"
-												  ,"/js/**"												  
+												  ,"/js/**"					
+												  ,"/errors/**"
 												  ,"/login/check"};
 
     @Bean
     SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
     	
         http
+        		.sessionManagement(session -> session
+        			.maximumSessions(1)
+        			.maxSessionsPreventsLogin(false)
+        			.expiredUrl("/login/expired")        			
+        		)
         		.csrf(AbstractHttpConfigurer::disable)       		
 				/*
 				 * .sessionManagement((sessionManagement) ->
@@ -56,19 +69,22 @@ public class AgentWebSecurity {
                         .anyRequest().authenticated()
                 )
                 .formLogin(formLogin -> formLogin
-                        .loginPage("/login/form")
+                        .loginPage(LOGIN_FORM)
                         .usernameParameter("userCd")
                         .passwordParameter("userPw")
-                        .loginProcessingUrl("/login/check")          
+                        .loginProcessingUrl(LOGIN_CHECK)          
                         .successHandler(new LoginSuccessHandler())
                         .failureHandler(new LoginFailureHandler())
                         .permitAll()
                 )
                 .logout(logout -> logout
-                		.logoutUrl("/logout")
+                		.logoutUrl(LOGIN_OUT)
                 		.logoutSuccessHandler(new LogoutSuccesHandler())
                 		.permitAll()
                 )
+                .exceptionHandling(
+                		exception -> exception.authenticationEntryPoint(new LoginAuthenticationEntryPoint(LOGIN_FORM))
+                ) 
                 .rememberMe(Customizer.withDefaults());
 
         return http.build();
@@ -124,6 +140,37 @@ public class AgentWebSecurity {
 				}
 	        } 
 	        res.sendRedirect("/login/form");
+		}
+    }
+    
+    class LoginAuthenticationEntryPoint implements AuthenticationEntryPoint {
+    	
+    	private String fwUrl;
+    	
+    	LoginAuthenticationEntryPoint(String fwUrl) {
+    		this.fwUrl = fwUrl;
+    	}
+
+		@Override
+		public void commence(HttpServletRequest req, HttpServletResponse res,AuthenticationException excp) throws IOException, ServletException {			
+			if(this.isAjax(req)) {
+				ResultData rslt = new ResultData(ApiResultEnum.ERROR,"SESSION_EXPIRED");
+				res.setContentType(MediaType.APPLICATION_JSON_VALUE);
+		        res.setStatus(HttpStatus.UNAUTHORIZED.value());
+		        res.setCharacterEncoding("UTF-8");
+		        res.getWriter().write(ObjectUtil.toJson(ObjectUtil.toJson(rslt)));
+			}else {
+				RequestDispatcher dispt = req.getRequestDispatcher(fwUrl);
+				dispt.forward(req, res);
+			}
+		}
+		
+		protected boolean isAjax(HttpServletRequest req) {
+			String xHeader = req.getHeader("x-requested-with");
+			if("XMLHttpRequest".equalsIgnoreCase(xHeader)){
+				return true;
+			}
+			return false;
 		}
     }
 }

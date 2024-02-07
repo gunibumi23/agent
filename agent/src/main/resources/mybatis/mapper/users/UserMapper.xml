@@ -11,7 +11,6 @@
 			  ,A.USER_STS
 			  ,A.TEAM_CD
 			  ,A.USER_PH
-			  ,A.USE_YN
 			  ,A.DEL_YN
 			  ,DATE_FORMAT(A.CREATED_DT,'%Y-%m-%d %H:%i:%s') CREATED_DT
 			  ,A.CREATED_CD
@@ -23,7 +22,7 @@
 	</sql>
 	
 	<select id="selectUserList" parameterType="agentMap" resultType="agentMap">
-		<!-- selectUserList -->
+		/** selectUserList **/
 		<include refid="selectUserQuery"></include>
 		<where>
 			<if test="userCd != '' and userCd != null">
@@ -38,9 +37,6 @@
 			<if test="userPh != '' and userPh != null">
 				A.USER_PH = #{userPh}
 			</if>			
-			<if test="useYn != '' and useYn != null">
-				A.USE_YN = #{useYn}
-			</if>
 			<if test="delYn != '' and delYn != null">
 				A.DEL_YN = #{delYn}
 			</if>
@@ -52,7 +48,48 @@
 	</select>
 	
 	<select id="selectUserInfo" parameterType="agentMap" resultType="agentMap">
+		/** selectUserInfo **/
 		<include refid="selectUserQuery"></include>
 		WHERE USER_CD = #{userCd}
 	</select>
+	
+	<update id="updateUserInfo" parameterType="agentMap">
+		/** updateUserInfo **/
+		INSERT INTO USERS 
+		(
+			 USER_CD
+			,USER_PW
+			,USER_NM
+			,USER_STS
+			,TEAM_CD
+			,USER_PH
+			,USE_YN
+			,DEL_YN
+			,CREATED_DT
+			,CREATED_CD
+			,UPDATED_DT
+			,UPDATED_CD
+	    )
+	    VALUES
+	    (
+	         #{userCd}
+			,#{userPw}
+			,#{userNm}
+			,#{userSts}
+			,#{teamCd}
+			,#{userPh}
+			,#{delYn}
+			,#{createdDt}
+			,#{createdCd}
+			,#{updatedDt}
+			,#{updatedCd}
+	    )
+	    ON DUPLICATE KEY UPDATE
+			 USER_NM    = #{userNm}
+			,USER_STS   = #{userSts}
+			,TEAM_CD    = #{teamCd}
+			,USER_PH    = #{userPh}
+			,UPDATED_DT = NOW()
+			,UPDATED_CD = #{updatedCd}
+	</update>
 </mapper>

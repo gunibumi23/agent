@@ -21,4 +21,12 @@ public interface UserMapper {
 	 * @return
 	 */
 	Map<String,Object> selectUserInfo(Map<String,Object> params);
+	
+	
+	/**
+	 * 사용자 정보 수정
+	 * @param params
+	 * @return
+	 */
+	int mergeUserInfo(Map<String,Object> params);
 }

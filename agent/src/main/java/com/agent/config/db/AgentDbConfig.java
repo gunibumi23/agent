@@ -37,8 +37,7 @@ public class AgentDbConfig {
     }
 
     @Bean
-    public SqlSessionFactory sqlSessionFactory() throws Exception {
-    	
+    public SqlSessionFactory sqlSessionFactory() throws Exception {    	
 
         ReloadSqlFactory sqlSessionFactoryBean = new ReloadSqlFactory();
         sqlSessionFactoryBean.setDataSource(dataSource());
@@ -49,11 +48,6 @@ public class AgentDbConfig {
         sqlSessionFactoryBean.setInterval(1000);
         
         return sqlSessionFactoryBean.getObject();
-        
-		/*
-		 * SqlSessionFactoryBean factoryBean = new SqlSessionFactoryBean();
-		 * factoryBean.setDataSource(dataSource()); return factoryBean.getObject();
-		 */
     }
     
     @Bean
