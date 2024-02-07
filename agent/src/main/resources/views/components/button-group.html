@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<div th:fragment="btns(authBtns)">
+   	<th:block th:each="authBtn : ${authBtns}">   	
+   		<th:block th:if="${authBtn.btnType == 'SAVE'}">
+   			<button type="button" class="btn btn-sm btn btn-success" th:id="${authBtn.btnCd}" th:text="${authBtn.btnNm}"></button>
+   		</th:block>
+   		<th:block th:if="${authBtn.btnType == 'DEL'}">
+   			<button type="button" class="btn btn-sm btn-danger" th:id="${authBtn.btnCd}" th:text="${authBtn.btnNm}"></button>
+   		</th:block>
+   		<th:block th:if="${authBtn.btnType == 'INIT'}">
+   			<button type="button" class="btn btn-sm btn btn-warning"  th:id="${authBtn.btnCd}" th:text="${authBtn.btnNm}"></button>
+   		</th:block>
+   		<th:block th:if="${authBtn.btnType == 'NEW'}">
+   			<button type="button" class="btn btn-sm btn btn-primary"  th:id="${authBtn.btnCd}" th:text="${authBtn.btnNm}"></button>
+   		</th:block>
+   	</th:block>
+</div>
+</html>

@@ -1,0 +1,930 @@
+2024-02-02  9:16:32 16144 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2024-02-02  9:16:32 16144 [Note] InnoDB: Uses event mutexes
+2024-02-02  9:16:32 16144 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2024-02-02  9:16:32 16144 [Note] InnoDB: Number of pools: 1
+2024-02-02  9:16:32 16144 [Note] InnoDB: Using SSE2 crc32 instructions
+2024-02-02  9:16:32 16144 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2024-02-02  9:16:32 16144 [Note] InnoDB: Completed initialization of buffer pool
+2024-02-02  9:16:32 16144 [Note] InnoDB: The first innodb_system data file 'ibdata1' did not exist. A new tablespace will be created!
+2024-02-02  9:16:32 16144 [Note] InnoDB: Setting file '.\ibdata1' size to 12 MB. Physically writing the file full; Please wait ...
+2024-02-02  9:16:32 16144 [Note] InnoDB: File '.\ibdata1' size is now 12 MB.
+2024-02-02  9:16:32 16144 [Note] InnoDB: Setting log file .\ib_logfile101 size to 50331648 bytes
+2024-02-02  9:16:32 16144 [Note] InnoDB: Setting log file .\ib_logfile1 size to 50331648 bytes
+2024-02-02  9:16:32 16144 [Note] InnoDB: Renaming log file .\ib_logfile101 to .\ib_logfile0
+2024-02-02  9:16:32 16144 [Note] InnoDB: New log files created, LSN=45790
+2024-02-02  9:16:32 16144 [Note] InnoDB: Doublewrite buffer not found: creating new
+2024-02-02  9:16:32 16144 [Note] InnoDB: Doublewrite buffer created
+2024-02-02  9:16:32 16144 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2024-02-02  9:16:32 16144 [Note] InnoDB: Creating foreign key constraint system tables.
+2024-02-02  9:16:32 16144 [Note] InnoDB: Creating tablespace and datafile system tables.
+2024-02-02  9:16:32 16144 [Note] InnoDB: Creating sys_virtual system tables.
+2024-02-02  9:16:32 16144 [Note] InnoDB: Creating shared tablespace for temporary tables
+2024-02-02  9:16:32 16144 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2024-02-02  9:16:32 16144 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2024-02-02  9:16:32 16144 [Note] InnoDB: Waiting for purge to start
+2024-02-02  9:16:32 16144 [Note] InnoDB: 5.7.20 started; log sequence number 0
+2024-02-02  9:16:32 16144 [Note] Plugin 'FEEDBACK' is disabled.
+2024-02-02  9:59:54 29516 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2024-02-02  9:59:54 29516 [Note] InnoDB: Uses event mutexes
+2024-02-02  9:59:54 29516 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2024-02-02  9:59:54 29516 [Note] InnoDB: Number of pools: 1
+2024-02-02  9:59:54 29516 [Note] InnoDB: Using SSE2 crc32 instructions
+2024-02-02  9:59:54 29516 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2024-02-02  9:59:54 29516 [Note] InnoDB: Completed initialization of buffer pool
+2024-02-02  9:59:54 29516 [Note] InnoDB: Highest supported file format is Barracuda.
+2024-02-02  9:59:54 29516 [Note] InnoDB: Starting crash recovery from checkpoint LSN=1637478
+2024-02-02  9:59:54 29516 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2024-02-02  9:59:54 29516 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2024-02-02  9:59:54 29516 [Note] InnoDB: Creating shared tablespace for temporary tables
+2024-02-02  9:59:54 29516 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2024-02-02  9:59:54 29516 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2024-02-02  9:59:54 29516 [Note] InnoDB: Waiting for purge to start
+2024-02-02  9:59:54 29516 [Note] InnoDB: 5.7.20 started; log sequence number 1637487
+2024-02-02  9:59:54 9152 [Note] InnoDB: Loading buffer pool(s) from C:\Users\kimgeonbeom\git\agent\db\data\ib_buffer_pool
+2024-02-02  9:59:54 29516 [Note] Plugin 'FEEDBACK' is disabled.
+2024-02-02  9:59:54 9152 [Note] InnoDB: Buffer pool(s) load completed at 240202  9:59:54
+2024-02-02 10:12:25 31220 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2024-02-02 10:12:25 31220 [Note] InnoDB: Uses event mutexes
+2024-02-02 10:12:25 31220 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2024-02-02 10:12:25 31220 [Note] InnoDB: Number of pools: 1
+2024-02-02 10:12:25 31220 [Note] InnoDB: Using SSE2 crc32 instructions
+2024-02-02 10:12:25 31220 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2024-02-02 10:12:25 31220 [Note] InnoDB: Completed initialization of buffer pool
+2024-02-02 10:12:25 31220 [Note] InnoDB: Highest supported file format is Barracuda.
+2024-02-02 10:12:25 31220 [Note] InnoDB: Starting crash recovery from checkpoint LSN=1637525
+2024-02-02 10:12:25 31220 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2024-02-02 10:12:25 31220 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2024-02-02 10:12:25 31220 [Note] InnoDB: Creating shared tablespace for temporary tables
+2024-02-02 10:12:25 31220 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2024-02-02 10:12:25 31220 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2024-02-02 10:12:25 31220 [Note] InnoDB: Waiting for purge to start
+2024-02-02 10:12:25 31220 [Note] InnoDB: 5.7.20 started; log sequence number 1637534
+2024-02-02 10:12:25 9048 [Note] InnoDB: Loading buffer pool(s) from C:\Users\kimgeonbeom\git\agent\db\data\ib_buffer_pool
+2024-02-02 10:12:25 31220 [Note] Plugin 'FEEDBACK' is disabled.
+2024-02-02 10:12:25 9048 [Note] InnoDB: Buffer pool(s) load completed at 240202 10:12:25
+2024-02-02 10:13:21 24420 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2024-02-02 10:13:21 24420 [Note] InnoDB: Uses event mutexes
+2024-02-02 10:13:21 24420 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2024-02-02 10:13:21 24420 [Note] InnoDB: Number of pools: 1
+2024-02-02 10:13:21 24420 [Note] InnoDB: Using SSE2 crc32 instructions
+2024-02-02 10:13:21 24420 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2024-02-02 10:13:21 24420 [Note] InnoDB: Completed initialization of buffer pool
+2024-02-02 10:13:21 24420 [Note] InnoDB: Highest supported file format is Barracuda.
+2024-02-02 10:13:21 24420 [Note] InnoDB: Starting crash recovery from checkpoint LSN=1637572
+2024-02-02 10:13:21 24420 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2024-02-02 10:13:21 24420 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2024-02-02 10:13:21 24420 [Note] InnoDB: Creating shared tablespace for temporary tables
+2024-02-02 10:13:21 24420 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2024-02-02 10:13:21 24420 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2024-02-02 10:13:21 24420 [Note] InnoDB: Waiting for purge to start
+2024-02-02 10:13:21 24420 [Note] InnoDB: 5.7.20 started; log sequence number 1637581
+2024-02-02 10:13:21 8232 [Note] InnoDB: Loading buffer pool(s) from C:\Users\kimgeonbeom\git\agent\db\data\ib_buffer_pool
+2024-02-02 10:13:21 24420 [Note] Plugin 'FEEDBACK' is disabled.
+2024-02-02 10:13:21 8232 [Note] InnoDB: Buffer pool(s) load completed at 240202 10:13:21
+2024-02-02 10:24:31 24208 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2024-02-02 10:24:31 24208 [Note] InnoDB: Uses event mutexes
+2024-02-02 10:24:31 24208 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2024-02-02 10:24:31 24208 [Note] InnoDB: Number of pools: 1
+2024-02-02 10:24:31 24208 [Note] InnoDB: Using SSE2 crc32 instructions
+2024-02-02 10:24:31 24208 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2024-02-02 10:24:31 24208 [Note] InnoDB: Completed initialization of buffer pool
+2024-02-02 10:24:31 24208 [Note] InnoDB: Highest supported file format is Barracuda.
+2024-02-02 10:24:31 24208 [Note] InnoDB: Starting crash recovery from checkpoint LSN=1637940
+2024-02-02 10:24:31 24208 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2024-02-02 10:24:31 24208 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2024-02-02 10:24:31 24208 [Note] InnoDB: Creating shared tablespace for temporary tables
+2024-02-02 10:24:31 24208 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2024-02-02 10:24:31 24208 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2024-02-02 10:24:31 24208 [Note] InnoDB: Waiting for purge to start
+2024-02-02 10:24:31 24208 [Note] InnoDB: 5.7.20 started; log sequence number 1637949
+2024-02-02 10:24:31 28484 [Note] InnoDB: Loading buffer pool(s) from C:\Users\kimgeonbeom\git\agent\db\data\ib_buffer_pool
+2024-02-02 10:24:31 24208 [Note] Plugin 'FEEDBACK' is disabled.
+2024-02-02 10:24:31 28484 [Note] InnoDB: Buffer pool(s) load completed at 240202 10:24:31
+2024-02-02 10:25:52 28168 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2024-02-02 10:25:52 28168 [Note] InnoDB: Uses event mutexes
+2024-02-02 10:25:52 28168 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2024-02-02 10:25:52 28168 [Note] InnoDB: Number of pools: 1
+2024-02-02 10:25:52 28168 [Note] InnoDB: Using SSE2 crc32 instructions
+2024-02-02 10:25:52 28168 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2024-02-02 10:25:52 28168 [Note] InnoDB: Completed initialization of buffer pool
+2024-02-02 10:25:52 28168 [Note] InnoDB: Highest supported file format is Barracuda.
+2024-02-02 10:25:52 28168 [Note] InnoDB: Starting crash recovery from checkpoint LSN=1637987
+2024-02-02 10:25:52 28168 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2024-02-02 10:25:52 28168 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2024-02-02 10:25:52 28168 [Note] InnoDB: Creating shared tablespace for temporary tables
+2024-02-02 10:25:52 28168 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2024-02-02 10:25:52 28168 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2024-02-02 10:25:52 28168 [Note] InnoDB: Waiting for purge to start
+2024-02-02 10:25:52 28168 [Note] InnoDB: 5.7.20 started; log sequence number 1637996
+2024-02-02 10:25:52 18456 [Note] InnoDB: Loading buffer pool(s) from C:\Users\kimgeonbeom\git\agent\db\data\ib_buffer_pool
+2024-02-02 10:25:52 28168 [Note] Plugin 'FEEDBACK' is disabled.
+2024-02-02 10:25:52 18456 [Note] InnoDB: Buffer pool(s) load completed at 240202 10:25:52
+2024-02-02 10:26:58 12144 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2024-02-02 10:26:58 12144 [Note] InnoDB: Uses event mutexes
+2024-02-02 10:26:58 12144 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2024-02-02 10:26:59 12144 [Note] InnoDB: Number of pools: 1
+2024-02-02 10:26:59 12144 [Note] InnoDB: Using SSE2 crc32 instructions
+2024-02-02 10:26:59 12144 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2024-02-02 10:26:59 12144 [Note] InnoDB: Completed initialization of buffer pool
+2024-02-02 10:26:59 12144 [Note] InnoDB: Highest supported file format is Barracuda.
+2024-02-02 10:26:59 12144 [Note] InnoDB: Starting crash recovery from checkpoint LSN=1638034
+2024-02-02 10:26:59 12144 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2024-02-02 10:26:59 12144 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2024-02-02 10:26:59 12144 [Note] InnoDB: Creating shared tablespace for temporary tables
+2024-02-02 10:26:59 12144 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2024-02-02 10:26:59 12144 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2024-02-02 10:26:59 12144 [Note] InnoDB: Waiting for purge to start
+2024-02-02 10:26:59 12144 [Note] InnoDB: 5.7.20 started; log sequence number 1638043
+2024-02-02 10:26:59 26824 [Note] InnoDB: Loading buffer pool(s) from C:\Users\kimgeonbeom\git\agent\db\data\ib_buffer_pool
+2024-02-02 10:26:59 12144 [Note] Plugin 'FEEDBACK' is disabled.
+2024-02-02 10:26:59 26824 [Note] InnoDB: Buffer pool(s) load completed at 240202 10:26:59
+2024-02-02 10:35:49 32232 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2024-02-02 10:35:49 32232 [Note] InnoDB: Uses event mutexes
+2024-02-02 10:35:49 32232 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2024-02-02 10:35:49 32232 [Note] InnoDB: Number of pools: 1
+2024-02-02 10:35:49 32232 [Note] InnoDB: Using SSE2 crc32 instructions
+2024-02-02 10:35:49 32232 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2024-02-02 10:35:49 32232 [Note] InnoDB: Completed initialization of buffer pool
+2024-02-02 10:35:49 32232 [Note] InnoDB: Highest supported file format is Barracuda.
+2024-02-02 10:35:49 32232 [Note] InnoDB: Starting crash recovery from checkpoint LSN=1638081
+2024-02-02 10:35:49 32232 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2024-02-02 10:35:49 32232 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2024-02-02 10:35:49 32232 [Note] InnoDB: Creating shared tablespace for temporary tables
+2024-02-02 10:35:49 32232 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2024-02-02 10:35:49 32232 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2024-02-02 10:35:49 32232 [Note] InnoDB: Waiting for purge to start
+2024-02-02 10:35:49 32232 [Note] InnoDB: 5.7.20 started; log sequence number 1638090
+2024-02-02 10:35:49 3816 [Note] InnoDB: Loading buffer pool(s) from C:\Users\kimgeonbeom\git\agent\db\data\ib_buffer_pool
+2024-02-02 10:35:49 32232 [Note] Plugin 'FEEDBACK' is disabled.
+2024-02-02 10:35:49 3816 [Note] InnoDB: Buffer pool(s) load completed at 240202 10:35:49
+2024-02-02 10:48:59 10268 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2024-02-02 10:48:59 10268 [Note] InnoDB: Uses event mutexes
+2024-02-02 10:48:59 10268 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2024-02-02 10:48:59 10268 [Note] InnoDB: Number of pools: 1
+2024-02-02 10:48:59 10268 [Note] InnoDB: Using SSE2 crc32 instructions
+2024-02-02 10:48:59 10268 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2024-02-02 10:48:59 10268 [Note] InnoDB: Completed initialization of buffer pool
+2024-02-02 10:48:59 10268 [Note] InnoDB: Highest supported file format is Barracuda.
+2024-02-02 10:48:59 10268 [Note] InnoDB: Starting crash recovery from checkpoint LSN=1638128
+2024-02-02 10:49:00 10268 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2024-02-02 10:49:00 10268 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2024-02-02 10:49:00 10268 [Note] InnoDB: Creating shared tablespace for temporary tables
+2024-02-02 10:49:00 10268 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2024-02-02 10:49:00 10268 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2024-02-02 10:49:00 10268 [Note] InnoDB: Waiting for purge to start
+2024-02-02 10:49:00 10268 [Note] InnoDB: 5.7.20 started; log sequence number 1638137
+2024-02-02 10:49:00 8636 [Note] InnoDB: Loading buffer pool(s) from C:\Users\kimgeonbeom\git\agent\db\data\ib_buffer_pool
+2024-02-02 10:49:00 10268 [Note] Plugin 'FEEDBACK' is disabled.
+2024-02-02 10:49:00 8636 [Note] InnoDB: Buffer pool(s) load completed at 240202 10:49:00
+2024-02-02 11:06:09 5700 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2024-02-02 11:06:09 5700 [Note] InnoDB: Uses event mutexes
+2024-02-02 11:06:09 5700 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2024-02-02 11:06:09 5700 [Note] InnoDB: Number of pools: 1
+2024-02-02 11:06:09 5700 [Note] InnoDB: Using SSE2 crc32 instructions
+2024-02-02 11:06:09 5700 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2024-02-02 11:06:09 5700 [Note] InnoDB: Completed initialization of buffer pool
+2024-02-02 11:06:09 5700 [Note] InnoDB: Highest supported file format is Barracuda.
+2024-02-02 11:06:09 5700 [Note] InnoDB: Starting crash recovery from checkpoint LSN=1638175
+2024-02-02 11:06:10 5700 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2024-02-02 11:06:10 5700 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2024-02-02 11:06:10 5700 [Note] InnoDB: Creating shared tablespace for temporary tables
+2024-02-02 11:06:10 5700 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2024-02-02 11:06:10 5700 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2024-02-02 11:06:10 5700 [Note] InnoDB: Waiting for purge to start
+2024-02-02 11:06:10 5700 [Note] InnoDB: 5.7.20 started; log sequence number 1638184
+2024-02-02 11:06:10 20452 [Note] InnoDB: Loading buffer pool(s) from C:\Users\kimgeonbeom\git\agent\db\data\ib_buffer_pool
+2024-02-02 11:06:10 5700 [Note] Plugin 'FEEDBACK' is disabled.
+2024-02-02 11:06:10 20452 [Note] InnoDB: Buffer pool(s) load completed at 240202 11:06:10
+2024-02-02 11:09:28 9352 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2024-02-02 11:09:28 9352 [Note] InnoDB: Uses event mutexes
+2024-02-02 11:09:28 9352 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2024-02-02 11:09:28 9352 [Note] InnoDB: Number of pools: 1
+2024-02-02 11:09:28 9352 [Note] InnoDB: Using SSE2 crc32 instructions
+2024-02-02 11:09:28 9352 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2024-02-02 11:09:28 9352 [Note] InnoDB: Completed initialization of buffer pool
+2024-02-02 11:09:28 9352 [Note] InnoDB: Highest supported file format is Barracuda.
+2024-02-02 11:09:28 9352 [Note] InnoDB: Starting crash recovery from checkpoint LSN=1638222
+2024-02-02 11:09:28 9352 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2024-02-02 11:09:28 9352 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2024-02-02 11:09:28 9352 [Note] InnoDB: Creating shared tablespace for temporary tables
+2024-02-02 11:09:28 9352 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2024-02-02 11:09:28 9352 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2024-02-02 11:09:28 9352 [Note] InnoDB: Waiting for purge to start
+2024-02-02 11:09:28 9352 [Note] InnoDB: 5.7.20 started; log sequence number 1638231
+2024-02-02 11:09:28 15828 [Note] InnoDB: Loading buffer pool(s) from C:\Users\kimgeonbeom\git\agent\db\data\ib_buffer_pool
+2024-02-02 11:09:28 9352 [Note] Plugin 'FEEDBACK' is disabled.
+2024-02-02 11:09:28 15828 [Note] InnoDB: Buffer pool(s) load completed at 240202 11:09:28
+2024-02-02 11:11:06 26196 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2024-02-02 11:11:06 26196 [Note] InnoDB: Uses event mutexes
+2024-02-02 11:11:06 26196 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2024-02-02 11:11:06 26196 [Note] InnoDB: Number of pools: 1
+2024-02-02 11:11:06 26196 [Note] InnoDB: Using SSE2 crc32 instructions
+2024-02-02 11:11:06 26196 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2024-02-02 11:11:06 26196 [Note] InnoDB: Completed initialization of buffer pool
+2024-02-02 11:11:06 26196 [Note] InnoDB: Highest supported file format is Barracuda.
+2024-02-02 11:11:06 26196 [Note] InnoDB: Starting crash recovery from checkpoint LSN=1638269
+2024-02-02 11:11:06 26196 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2024-02-02 11:11:06 26196 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2024-02-02 11:11:06 26196 [Note] InnoDB: Creating shared tablespace for temporary tables
+2024-02-02 11:11:06 26196 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2024-02-02 11:11:06 26196 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2024-02-02 11:11:06 26196 [Note] InnoDB: Waiting for purge to start
+2024-02-02 11:11:06 26196 [Note] InnoDB: 5.7.20 started; log sequence number 1638278
+2024-02-02 11:11:07 29976 [Note] InnoDB: Loading buffer pool(s) from C:\Users\kimgeonbeom\git\agent\db\data\ib_buffer_pool
+2024-02-02 11:11:07 26196 [Note] Plugin 'FEEDBACK' is disabled.
+2024-02-02 11:11:07 29976 [Note] InnoDB: Buffer pool(s) load completed at 240202 11:11:07
+2024-02-02 11:13:50 17532 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2024-02-02 11:13:50 17532 [Note] InnoDB: Uses event mutexes
+2024-02-02 11:13:50 17532 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2024-02-02 11:13:50 17532 [Note] InnoDB: Number of pools: 1
+2024-02-02 11:13:50 17532 [Note] InnoDB: Using SSE2 crc32 instructions
+2024-02-02 11:13:50 17532 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2024-02-02 11:13:50 17532 [Note] InnoDB: Completed initialization of buffer pool
+2024-02-02 11:13:50 17532 [Note] InnoDB: Highest supported file format is Barracuda.
+2024-02-02 11:13:50 17532 [Note] InnoDB: Starting crash recovery from checkpoint LSN=1638316
+2024-02-02 11:13:50 17532 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2024-02-02 11:13:50 17532 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2024-02-02 11:13:50 17532 [Note] InnoDB: Creating shared tablespace for temporary tables
+2024-02-02 11:13:50 17532 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2024-02-02 11:13:50 17532 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2024-02-02 11:13:50 17532 [Note] InnoDB: Waiting for purge to start
+2024-02-02 11:13:50 17532 [Note] InnoDB: 5.7.20 started; log sequence number 1638325
+2024-02-02 11:13:50 15356 [Note] InnoDB: Loading buffer pool(s) from C:\Users\kimgeonbeom\git\agent\db\data\ib_buffer_pool
+2024-02-02 11:13:50 17532 [Note] Plugin 'FEEDBACK' is disabled.
+2024-02-02 11:13:50 15356 [Note] InnoDB: Buffer pool(s) load completed at 240202 11:13:50
+2024-02-02 11:14:51 9544 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2024-02-02 11:14:51 9544 [Note] InnoDB: Uses event mutexes
+2024-02-02 11:14:51 9544 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2024-02-02 11:14:51 9544 [Note] InnoDB: Number of pools: 1
+2024-02-02 11:14:51 9544 [Note] InnoDB: Using SSE2 crc32 instructions
+2024-02-02 11:14:51 9544 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2024-02-02 11:14:51 9544 [Note] InnoDB: Completed initialization of buffer pool
+2024-02-02 11:14:51 9544 [Note] InnoDB: Highest supported file format is Barracuda.
+2024-02-02 11:14:51 9544 [Note] InnoDB: Starting crash recovery from checkpoint LSN=1638363
+2024-02-02 11:14:52 9544 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2024-02-02 11:14:52 9544 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2024-02-02 11:14:52 9544 [Note] InnoDB: Creating shared tablespace for temporary tables
+2024-02-02 11:14:52 9544 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2024-02-02 11:14:52 9544 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2024-02-02 11:14:52 9544 [Note] InnoDB: Waiting for purge to start
+2024-02-02 11:14:52 9544 [Note] InnoDB: 5.7.20 started; log sequence number 1638372
+2024-02-02 11:14:52 20428 [Note] InnoDB: Loading buffer pool(s) from C:\Users\kimgeonbeom\git\agent\db\data\ib_buffer_pool
+2024-02-02 11:14:52 9544 [Note] Plugin 'FEEDBACK' is disabled.
+2024-02-02 11:14:52 20428 [Note] InnoDB: Buffer pool(s) load completed at 240202 11:14:52
+2024-02-02 11:18:22 9232 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2024-02-02 11:18:22 9232 [Note] InnoDB: Uses event mutexes
+2024-02-02 11:18:22 9232 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2024-02-02 11:18:22 9232 [Note] InnoDB: Number of pools: 1
+2024-02-02 11:18:22 9232 [Note] InnoDB: Using SSE2 crc32 instructions
+2024-02-02 11:18:22 9232 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2024-02-02 11:18:22 9232 [Note] InnoDB: Completed initialization of buffer pool
+2024-02-02 11:18:22 9232 [Note] InnoDB: Highest supported file format is Barracuda.
+2024-02-02 11:18:22 9232 [Note] InnoDB: Starting crash recovery from checkpoint LSN=1638435
+2024-02-02 11:18:22 9232 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2024-02-02 11:18:22 9232 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2024-02-02 11:18:22 9232 [Note] InnoDB: Creating shared tablespace for temporary tables
+2024-02-02 11:18:22 9232 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2024-02-02 11:18:22 9232 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2024-02-02 11:18:22 9232 [Note] InnoDB: Waiting for purge to start
+2024-02-02 11:18:22 9232 [Note] InnoDB: 5.7.20 started; log sequence number 1638444
+2024-02-02 11:18:22 7432 [Note] InnoDB: Loading buffer pool(s) from C:\Users\kimgeonbeom\git\agent\db\data\ib_buffer_pool
+2024-02-02 11:18:22 9232 [Note] Plugin 'FEEDBACK' is disabled.
+2024-02-02 11:18:22 7432 [Note] InnoDB: Buffer pool(s) load completed at 240202 11:18:22
+2024-02-02 11:50:42 31864 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2024-02-02 11:50:42 31864 [Note] InnoDB: Uses event mutexes
+2024-02-02 11:50:42 31864 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2024-02-02 11:50:42 31864 [Note] InnoDB: Number of pools: 1
+2024-02-02 11:50:42 31864 [Note] InnoDB: Using SSE2 crc32 instructions
+2024-02-02 11:50:42 31864 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2024-02-02 11:50:42 31864 [Note] InnoDB: Completed initialization of buffer pool
+2024-02-02 11:50:42 31864 [Note] InnoDB: Highest supported file format is Barracuda.
+2024-02-02 11:50:42 31864 [Note] InnoDB: Starting crash recovery from checkpoint LSN=1638482
+2024-02-02 11:50:42 31864 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2024-02-02 11:50:42 31864 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2024-02-02 11:50:43 31864 [Note] InnoDB: Creating shared tablespace for temporary tables
+2024-02-02 11:50:43 31864 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2024-02-02 11:50:43 31864 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2024-02-02 11:50:43 31864 [Note] InnoDB: Waiting for purge to start
+2024-02-02 11:50:43 31864 [Note] InnoDB: 5.7.20 started; log sequence number 1638491
+2024-02-02 11:50:43 26204 [Note] InnoDB: Loading buffer pool(s) from C:\Users\kimgeonbeom\git\agent\db\data\ib_buffer_pool
+2024-02-02 11:50:43 26204 [Note] InnoDB: Buffer pool(s) load completed at 240202 11:50:43
+2024-02-02 11:50:43 31864 [Note] Plugin 'FEEDBACK' is disabled.
+2024-02-02 13:13:26 25384 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2024-02-02 13:13:26 25384 [Note] InnoDB: Uses event mutexes
+2024-02-02 13:13:26 25384 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2024-02-02 13:13:26 25384 [Note] InnoDB: Number of pools: 1
+2024-02-02 13:13:26 25384 [Note] InnoDB: Using SSE2 crc32 instructions
+2024-02-02 13:13:26 25384 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2024-02-02 13:13:26 25384 [Note] InnoDB: Completed initialization of buffer pool
+2024-02-02 13:13:26 25384 [Note] InnoDB: Highest supported file format is Barracuda.
+2024-02-02 13:13:26 25384 [Note] InnoDB: Starting crash recovery from checkpoint LSN=1638529
+2024-02-02 13:13:26 25384 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2024-02-02 13:13:26 25384 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2024-02-02 13:13:26 25384 [Note] InnoDB: Creating shared tablespace for temporary tables
+2024-02-02 13:13:26 25384 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2024-02-02 13:13:26 25384 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2024-02-02 13:13:26 25384 [Note] InnoDB: Waiting for purge to start
+2024-02-02 13:13:26 25384 [Note] InnoDB: 5.7.20 started; log sequence number 1638538
+2024-02-02 13:13:26 22064 [Note] InnoDB: Loading buffer pool(s) from C:\Users\kimgeonbeom\git\agent\db\data\ib_buffer_pool
+2024-02-02 13:13:26 25384 [Note] Plugin 'FEEDBACK' is disabled.
+2024-02-02 13:13:26 22064 [Note] InnoDB: Buffer pool(s) load completed at 240202 13:13:26
+2024-02-02 13:14:13 13688 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2024-02-02 13:14:13 13688 [Note] InnoDB: Uses event mutexes
+2024-02-02 13:14:13 13688 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2024-02-02 13:14:13 13688 [Note] InnoDB: Number of pools: 1
+2024-02-02 13:14:13 13688 [Note] InnoDB: Using SSE2 crc32 instructions
+2024-02-02 13:14:13 13688 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2024-02-02 13:14:13 13688 [Note] InnoDB: Completed initialization of buffer pool
+2024-02-02 13:14:13 13688 [Note] InnoDB: Highest supported file format is Barracuda.
+2024-02-02 13:14:13 13688 [Note] InnoDB: Starting crash recovery from checkpoint LSN=1638576
+2024-02-02 13:14:13 13688 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2024-02-02 13:14:13 13688 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2024-02-02 13:14:13 13688 [Note] InnoDB: Creating shared tablespace for temporary tables
+2024-02-02 13:14:13 13688 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2024-02-02 13:14:13 13688 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2024-02-02 13:14:13 13688 [Note] InnoDB: Waiting for purge to start
+2024-02-02 13:14:13 13688 [Note] InnoDB: 5.7.20 started; log sequence number 1638585
+2024-02-02 13:14:13 1224 [Note] InnoDB: Loading buffer pool(s) from C:\Users\kimgeonbeom\git\agent\db\data\ib_buffer_pool
+2024-02-02 13:14:13 13688 [Note] Plugin 'FEEDBACK' is disabled.
+2024-02-02 13:14:13 1224 [Note] InnoDB: Buffer pool(s) load completed at 240202 13:14:13
+2024-02-02 13:17:43 14380 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2024-02-02 13:17:43 14380 [Note] InnoDB: Uses event mutexes
+2024-02-02 13:17:43 14380 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2024-02-02 13:17:43 14380 [Note] InnoDB: Number of pools: 1
+2024-02-02 13:17:43 14380 [Note] InnoDB: Using SSE2 crc32 instructions
+2024-02-02 13:17:43 14380 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2024-02-02 13:17:43 14380 [Note] InnoDB: Completed initialization of buffer pool
+2024-02-02 13:17:43 14380 [Note] InnoDB: Highest supported file format is Barracuda.
+2024-02-02 13:17:43 14380 [Note] InnoDB: Starting crash recovery from checkpoint LSN=1640658
+2024-02-02 13:17:43 14380 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2024-02-02 13:17:43 14380 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2024-02-02 13:17:43 14380 [Note] InnoDB: Creating shared tablespace for temporary tables
+2024-02-02 13:17:43 14380 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2024-02-02 13:17:43 14380 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2024-02-02 13:17:43 14380 [Note] InnoDB: Waiting for purge to start
+2024-02-02 13:17:43 14380 [Note] InnoDB: 5.7.20 started; log sequence number 1640667
+2024-02-02 13:17:43 10304 [Note] InnoDB: Loading buffer pool(s) from C:\Users\kimgeonbeom\git\agent\db\data\ib_buffer_pool
+2024-02-02 13:17:44 14380 [Note] Plugin 'FEEDBACK' is disabled.
+2024-02-02 13:17:44 10304 [Note] InnoDB: Buffer pool(s) load completed at 240202 13:17:44
+2024-02-02 13:18:45 11388 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2024-02-02 13:18:45 11388 [Note] InnoDB: Uses event mutexes
+2024-02-02 13:18:45 11388 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2024-02-02 13:18:45 11388 [Note] InnoDB: Number of pools: 1
+2024-02-02 13:18:45 11388 [Note] InnoDB: Using SSE2 crc32 instructions
+2024-02-02 13:18:45 11388 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2024-02-02 13:18:45 11388 [Note] InnoDB: Completed initialization of buffer pool
+2024-02-02 13:18:46 11388 [Note] InnoDB: Highest supported file format is Barracuda.
+2024-02-02 13:18:46 11388 [Note] InnoDB: Starting crash recovery from checkpoint LSN=1640705
+2024-02-02 13:18:46 11388 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2024-02-02 13:18:46 11388 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2024-02-02 13:18:46 11388 [Note] InnoDB: Creating shared tablespace for temporary tables
+2024-02-02 13:18:46 11388 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2024-02-02 13:18:46 11388 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2024-02-02 13:18:46 11388 [Note] InnoDB: Waiting for purge to start
+2024-02-02 13:18:46 11388 [Note] InnoDB: 5.7.20 started; log sequence number 1640714
+2024-02-02 13:18:46 27716 [Note] InnoDB: Loading buffer pool(s) from C:\Users\kimgeonbeom\git\agent\db\data\ib_buffer_pool
+2024-02-02 13:18:46 27716 [Note] InnoDB: Buffer pool(s) load completed at 240202 13:18:46
+2024-02-02 13:18:46 11388 [Note] Plugin 'FEEDBACK' is disabled.
+2024-02-02 15:34:00 27540 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2024-02-02 15:34:00 27540 [Note] InnoDB: Uses event mutexes
+2024-02-02 15:34:00 27540 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2024-02-02 15:34:00 27540 [Note] InnoDB: Number of pools: 1
+2024-02-02 15:34:00 27540 [Note] InnoDB: Using SSE2 crc32 instructions
+2024-02-02 15:34:00 27540 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2024-02-02 15:34:00 27540 [Note] InnoDB: Completed initialization of buffer pool
+2024-02-02 15:34:00 27540 [Note] InnoDB: Highest supported file format is Barracuda.
+2024-02-02 15:34:00 27540 [Note] InnoDB: Starting crash recovery from checkpoint LSN=1654079
+2024-02-02 15:34:01 27540 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2024-02-02 15:34:01 27540 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2024-02-02 15:34:01 27540 [Note] InnoDB: Creating shared tablespace for temporary tables
+2024-02-02 15:34:01 27540 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2024-02-02 15:34:01 27540 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2024-02-02 15:34:01 27540 [Note] InnoDB: Waiting for purge to start
+2024-02-02 15:34:01 27540 [Note] InnoDB: 5.7.20 started; log sequence number 1654088
+2024-02-02 15:34:01 9620 [Note] InnoDB: Loading buffer pool(s) from C:\Users\kimgeonbeom\git\agent\db\data\ib_buffer_pool
+2024-02-02 15:34:01 9620 [Note] InnoDB: Buffer pool(s) load completed at 240202 15:34:01
+2024-02-02 15:34:01 27540 [Note] Plugin 'FEEDBACK' is disabled.
+2024-02-02 15:36:16 18048 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2024-02-02 15:36:16 18048 [Note] InnoDB: Uses event mutexes
+2024-02-02 15:36:16 18048 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2024-02-02 15:36:16 18048 [Note] InnoDB: Number of pools: 1
+2024-02-02 15:36:16 18048 [Note] InnoDB: Using SSE2 crc32 instructions
+2024-02-02 15:36:16 18048 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2024-02-02 15:36:16 18048 [Note] InnoDB: Completed initialization of buffer pool
+2024-02-02 15:36:16 18048 [Note] InnoDB: Highest supported file format is Barracuda.
+2024-02-02 15:36:16 18048 [Note] InnoDB: Starting crash recovery from checkpoint LSN=1664621
+2024-02-02 15:36:16 18048 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2024-02-02 15:36:16 18048 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2024-02-02 15:36:16 18048 [Note] InnoDB: Creating shared tablespace for temporary tables
+2024-02-02 15:36:16 18048 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2024-02-02 15:36:16 18048 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2024-02-02 15:36:16 18048 [Note] InnoDB: Waiting for purge to start
+2024-02-02 15:36:16 18048 [Note] InnoDB: 5.7.20 started; log sequence number 1664630
+2024-02-02 15:36:17 27856 [Note] InnoDB: Loading buffer pool(s) from C:\Users\kimgeonbeom\git\agent\db\data\ib_buffer_pool
+2024-02-02 15:36:17 18048 [Note] Plugin 'FEEDBACK' is disabled.
+2024-02-02 15:36:17 27856 [Note] InnoDB: Buffer pool(s) load completed at 240202 15:36:17
+2024-02-02 15:54:11 25524 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2024-02-02 15:54:11 25524 [Note] InnoDB: Uses event mutexes
+2024-02-02 15:54:11 25524 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2024-02-02 15:54:11 25524 [Note] InnoDB: Number of pools: 1
+2024-02-02 15:54:11 25524 [Note] InnoDB: Using SSE2 crc32 instructions
+2024-02-02 15:54:11 25524 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2024-02-02 15:54:11 25524 [Note] InnoDB: Completed initialization of buffer pool
+2024-02-02 15:54:11 25524 [Note] InnoDB: Highest supported file format is Barracuda.
+2024-02-02 15:54:11 25524 [Note] InnoDB: Starting crash recovery from checkpoint LSN=1664668
+2024-02-02 15:54:11 25524 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2024-02-02 15:54:11 25524 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2024-02-02 15:54:11 25524 [Note] InnoDB: Creating shared tablespace for temporary tables
+2024-02-02 15:54:11 25524 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2024-02-02 15:54:11 25524 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2024-02-02 15:54:11 25524 [Note] InnoDB: Waiting for purge to start
+2024-02-02 15:54:11 25524 [Note] InnoDB: 5.7.20 started; log sequence number 1664677
+2024-02-02 15:54:11 10288 [Note] InnoDB: Loading buffer pool(s) from C:\Users\kimgeonbeom\git\agent\db\data\ib_buffer_pool
+2024-02-02 15:54:11 25524 [Note] Plugin 'FEEDBACK' is disabled.
+2024-02-02 15:54:11 10288 [Note] InnoDB: Buffer pool(s) load completed at 240202 15:54:11
+2024-02-02 17:38:25 30780 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2024-02-02 17:38:25 30780 [Note] InnoDB: Uses event mutexes
+2024-02-02 17:38:25 30780 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2024-02-02 17:38:25 30780 [Note] InnoDB: Number of pools: 1
+2024-02-02 17:38:25 30780 [Note] InnoDB: Using SSE2 crc32 instructions
+2024-02-02 17:38:25 30780 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2024-02-02 17:38:25 30780 [Note] InnoDB: Completed initialization of buffer pool
+2024-02-02 17:38:25 30780 [Note] InnoDB: Highest supported file format is Barracuda.
+2024-02-02 17:38:25 30780 [Note] InnoDB: Starting crash recovery from checkpoint LSN=1664715
+2024-02-02 17:38:25 30780 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2024-02-02 17:38:25 30780 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2024-02-02 17:38:25 30780 [Note] InnoDB: Creating shared tablespace for temporary tables
+2024-02-02 17:38:25 30780 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2024-02-02 17:38:25 30780 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2024-02-02 17:38:25 30780 [Note] InnoDB: Waiting for purge to start
+2024-02-02 17:38:26 30780 [Note] InnoDB: 5.7.20 started; log sequence number 1664724
+2024-02-02 17:38:26 16716 [Note] InnoDB: Loading buffer pool(s) from C:\Users\kimgeonbeom\git\agent\db\data\ib_buffer_pool
+2024-02-02 17:38:26 30780 [Note] Plugin 'FEEDBACK' is disabled.
+2024-02-02 17:38:26 16716 [Note] InnoDB: Buffer pool(s) load completed at 240202 17:38:26
+2024-02-05 13:21:13 4124 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2024-02-05 13:21:13 4124 [Note] InnoDB: Uses event mutexes
+2024-02-05 13:21:13 4124 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2024-02-05 13:21:13 4124 [Note] InnoDB: Number of pools: 1
+2024-02-05 13:21:13 4124 [Note] InnoDB: Using SSE2 crc32 instructions
+2024-02-05 13:21:13 4124 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2024-02-05 13:21:13 4124 [Note] InnoDB: Completed initialization of buffer pool
+2024-02-05 13:21:13 4124 [Note] InnoDB: Highest supported file format is Barracuda.
+2024-02-05 13:21:13 4124 [Note] InnoDB: Starting crash recovery from checkpoint LSN=1665216
+2024-02-05 13:21:13 4124 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2024-02-05 13:21:13 4124 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2024-02-05 13:21:13 4124 [Note] InnoDB: Creating shared tablespace for temporary tables
+2024-02-05 13:21:13 4124 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2024-02-05 13:21:13 4124 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2024-02-05 13:21:13 4124 [Note] InnoDB: Waiting for purge to start
+2024-02-05 13:21:13 4124 [Note] InnoDB: 5.7.20 started; log sequence number 1665225
+2024-02-05 13:21:13 5408 [Note] InnoDB: Loading buffer pool(s) from C:\Users\kimgeonbeom\git\agent\db\data\ib_buffer_pool
+2024-02-05 13:21:13 4124 [Note] Plugin 'FEEDBACK' is disabled.
+2024-02-05 13:21:13 5408 [Note] InnoDB: Buffer pool(s) load completed at 240205 13:21:13
+2024-02-05 16:46:17 13656 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2024-02-05 16:46:17 13656 [Note] InnoDB: Uses event mutexes
+2024-02-05 16:46:17 13656 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2024-02-05 16:46:17 13656 [Note] InnoDB: Number of pools: 1
+2024-02-05 16:46:17 13656 [Note] InnoDB: Using SSE2 crc32 instructions
+2024-02-05 16:46:17 13656 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2024-02-05 16:46:17 13656 [Note] InnoDB: Completed initialization of buffer pool
+2024-02-05 16:46:17 13656 [Note] InnoDB: Highest supported file format is Barracuda.
+2024-02-05 16:46:17 13656 [Note] InnoDB: Starting crash recovery from checkpoint LSN=1665263
+2024-02-05 16:46:18 23016 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2024-02-05 16:46:18 23016 [Note] InnoDB: Uses event mutexes
+2024-02-05 16:46:18 23016 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2024-02-05 16:46:18 23016 [Note] InnoDB: Number of pools: 1
+2024-02-05 16:46:18 23016 [Note] InnoDB: Using SSE2 crc32 instructions
+2024-02-05 16:46:18 23016 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2024-02-05 16:46:18 23016 [Note] InnoDB: Completed initialization of buffer pool
+2024-02-05 16:46:18 23016 [ERROR] InnoDB: The innodb_system data file 'ibdata1' must be writable
+2024-02-05 16:46:18 23016 [ERROR] InnoDB: The innodb_system data file 'ibdata1' must be writable
+2024-02-05 16:46:18 23016 [ERROR] InnoDB: Plugin initialization aborted with error Generic error
+2024-02-05 16:46:18 13656 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2024-02-05 16:46:18 13656 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2024-02-05 16:46:18 13656 [Note] InnoDB: Creating shared tablespace for temporary tables
+2024-02-05 16:46:18 13656 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2024-02-05 16:46:18 13656 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2024-02-05 16:46:18 13656 [Note] InnoDB: Waiting for purge to start
+2024-02-05 16:46:18 13656 [Note] InnoDB: 5.7.20 started; log sequence number 1665272
+2024-02-05 16:46:18 17752 [Note] InnoDB: Loading buffer pool(s) from C:\Users\kimgeonbeom\git\agent\db\data\ib_buffer_pool
+2024-02-05 16:46:18 13656 [Note] Plugin 'FEEDBACK' is disabled.
+2024-02-05 16:46:18 17752 [Note] InnoDB: Buffer pool(s) load completed at 240205 16:46:18
+2024-02-05 16:46:18 23016 [Note] InnoDB: Starting shutdown...
+2024-02-05 16:46:18 23016 [ERROR] Plugin 'InnoDB' init function returned error.
+2024-02-05 16:46:18 23016 [ERROR] Plugin 'InnoDB' registration as a STORAGE ENGINE failed.
+2024-02-05 16:46:18 23016 [Note] Plugin 'FEEDBACK' is disabled.
+2024-02-05 16:46:18 15596 [ERROR] mysqld.exe: Table '.\mysql\help_topic' is marked as crashed and should be repaired
+2024-02-05 16:46:18 15596 [ERROR] mysqld.exe: Table 'help_topic' is marked as crashed and should be repaired
+2024-02-05 16:46:18 15596 [Warning] Checking table:   '.\mysql\help_topic'
+2024-02-05 16:46:18 15596 [ERROR] mysql.help_topic: 1 client is using or hasn't closed the table properly
+2024-02-05 16:46:18 15596 [ERROR] mysqld.exe: Table '.\mysql\help_category' is marked as crashed and should be repaired
+2024-02-05 16:46:18 15596 [ERROR] mysqld.exe: Table 'help_category' is marked as crashed and should be repaired
+2024-02-05 16:46:18 15596 [Warning] Checking table:   '.\mysql\help_category'
+2024-02-05 16:46:18 15596 [ERROR] mysql.help_category: 1 client is using or hasn't closed the table properly
+2024-02-05 16:46:18 15596 [ERROR] mysqld.exe: Table '.\mysql\help_keyword' is marked as crashed and should be repaired
+2024-02-05 16:46:18 15596 [ERROR] mysqld.exe: Table 'help_keyword' is marked as crashed and should be repaired
+2024-02-05 16:46:18 15596 [Warning] Checking table:   '.\mysql\help_keyword'
+2024-02-05 16:46:18 15596 [ERROR] mysql.help_keyword: 1 client is using or hasn't closed the table properly
+2024-02-05 16:46:18 15596 [ERROR] mysqld.exe: Table '.\mysql\help_relation' is marked as crashed and should be repaired
+2024-02-05 16:46:18 15596 [ERROR] mysqld.exe: Table 'help_relation' is marked as crashed and should be repaired
+2024-02-05 16:46:18 15596 [Warning] Checking table:   '.\mysql\help_relation'
+2024-02-05 16:46:18 15596 [ERROR] mysql.help_relation: 1 client is using or hasn't closed the table properly
+2024-02-05 16:54:19 32360 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2024-02-05 16:54:19 32360 [Note] InnoDB: Uses event mutexes
+2024-02-05 16:54:19 32360 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2024-02-05 16:54:19 32360 [Note] InnoDB: Number of pools: 1
+2024-02-05 16:54:19 32360 [Note] InnoDB: Using SSE2 crc32 instructions
+2024-02-05 16:54:19 32360 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2024-02-05 16:54:19 32360 [Note] InnoDB: Completed initialization of buffer pool
+2024-02-05 16:54:19 32360 [Note] InnoDB: Highest supported file format is Barracuda.
+2024-02-05 16:54:19 32360 [Note] InnoDB: Starting crash recovery from checkpoint LSN=1665310
+2024-02-05 16:54:19 32360 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2024-02-05 16:54:19 32360 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2024-02-05 16:54:19 32360 [Note] InnoDB: Creating shared tablespace for temporary tables
+2024-02-05 16:54:19 32360 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2024-02-05 16:54:19 32360 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2024-02-05 16:54:19 32360 [Note] InnoDB: Waiting for purge to start
+2024-02-05 16:54:20 32360 [Note] InnoDB: 5.7.20 started; log sequence number 1665319
+2024-02-05 16:54:20 15240 [Note] InnoDB: Loading buffer pool(s) from C:\Users\kimgeonbeom\git\agent\db\data\ib_buffer_pool
+2024-02-05 16:54:20 32360 [Note] Plugin 'FEEDBACK' is disabled.
+2024-02-05 16:54:20 15240 [Note] InnoDB: Buffer pool(s) load completed at 240205 16:54:20
+2024-02-05 17:13:50 23176 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2024-02-05 17:13:50 23176 [Note] InnoDB: Uses event mutexes
+2024-02-05 17:13:50 23176 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2024-02-05 17:13:50 23176 [Note] InnoDB: Number of pools: 1
+2024-02-05 17:13:50 23176 [Note] InnoDB: Using SSE2 crc32 instructions
+2024-02-05 17:13:50 23176 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2024-02-05 17:13:50 23176 [Note] InnoDB: Completed initialization of buffer pool
+2024-02-05 17:13:50 23176 [Note] InnoDB: Highest supported file format is Barracuda.
+2024-02-05 17:13:50 23176 [Note] InnoDB: Starting crash recovery from checkpoint LSN=1665357
+2024-02-05 17:13:50 23176 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2024-02-05 17:13:51 23176 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2024-02-05 17:13:51 23176 [Note] InnoDB: Creating shared tablespace for temporary tables
+2024-02-05 17:13:51 23176 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2024-02-05 17:13:51 23176 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2024-02-05 17:13:51 23176 [Note] InnoDB: Waiting for purge to start
+2024-02-05 17:13:51 23176 [Note] InnoDB: 5.7.20 started; log sequence number 1665366
+2024-02-05 17:13:51 26960 [Note] InnoDB: Loading buffer pool(s) from C:\Users\kimgeonbeom\git\agent\db\data\ib_buffer_pool
+2024-02-05 17:13:51 23176 [Note] Plugin 'FEEDBACK' is disabled.
+2024-02-05 17:13:51 26960 [Note] InnoDB: Buffer pool(s) load completed at 240205 17:13:51
+2024-02-05 17:25:36 23132 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2024-02-05 17:25:36 23132 [Note] InnoDB: Uses event mutexes
+2024-02-05 17:25:36 23132 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2024-02-05 17:25:36 23132 [Note] InnoDB: Number of pools: 1
+2024-02-05 17:25:36 23132 [Note] InnoDB: Using SSE2 crc32 instructions
+2024-02-05 17:25:36 23132 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2024-02-05 17:25:36 23132 [Note] InnoDB: Completed initialization of buffer pool
+2024-02-05 17:25:36 23132 [Note] InnoDB: Highest supported file format is Barracuda.
+2024-02-05 17:25:36 23132 [Note] InnoDB: Starting crash recovery from checkpoint LSN=1665404
+2024-02-05 17:25:36 23132 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2024-02-05 17:25:36 23132 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2024-02-05 17:25:36 23132 [Note] InnoDB: Creating shared tablespace for temporary tables
+2024-02-05 17:25:36 23132 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2024-02-05 17:25:36 23132 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2024-02-05 17:25:36 23132 [Note] InnoDB: Waiting for purge to start
+2024-02-05 17:25:36 23132 [Note] InnoDB: 5.7.20 started; log sequence number 1665413
+2024-02-05 17:25:36 30724 [Note] InnoDB: Loading buffer pool(s) from C:\Users\kimgeonbeom\git\agent\db\data\ib_buffer_pool
+2024-02-05 17:25:37 30724 [Note] InnoDB: Buffer pool(s) load completed at 240205 17:25:37
+2024-02-05 17:25:37 23132 [Note] Plugin 'FEEDBACK' is disabled.
+2024-02-06 11:03:26 3512 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2024-02-06 11:03:26 3512 [Note] InnoDB: Uses event mutexes
+2024-02-06 11:03:26 3512 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2024-02-06 11:03:26 3512 [Note] InnoDB: Number of pools: 1
+2024-02-06 11:03:26 3512 [Note] InnoDB: Using SSE2 crc32 instructions
+2024-02-06 11:03:26 3512 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2024-02-06 11:03:26 3512 [Note] InnoDB: Completed initialization of buffer pool
+2024-02-06 11:03:26 3512 [Note] InnoDB: Highest supported file format is Barracuda.
+2024-02-06 11:03:26 3512 [Note] InnoDB: Starting crash recovery from checkpoint LSN=1665451
+2024-02-06 11:03:26 3512 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2024-02-06 11:03:26 3512 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2024-02-06 11:03:26 3512 [Note] InnoDB: Creating shared tablespace for temporary tables
+2024-02-06 11:03:26 3512 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2024-02-06 11:03:26 3512 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2024-02-06 11:03:26 3512 [Note] InnoDB: Waiting for purge to start
+2024-02-06 11:03:26 3512 [Note] InnoDB: 5.7.20 started; log sequence number 1665460
+2024-02-06 11:03:26 9444 [Note] InnoDB: Loading buffer pool(s) from C:\Users\kimgeonbeom\git\agent\db\data\ib_buffer_pool
+2024-02-06 11:03:26 3512 [Note] Plugin 'FEEDBACK' is disabled.
+2024-02-06 11:03:26 9444 [Note] InnoDB: Buffer pool(s) load completed at 240206 11:03:26
+2024-02-06 11:07:25 30988 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2024-02-06 11:07:25 30988 [Note] InnoDB: Uses event mutexes
+2024-02-06 11:07:25 30988 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2024-02-06 11:07:25 30988 [Note] InnoDB: Number of pools: 1
+2024-02-06 11:07:25 30988 [Note] InnoDB: Using SSE2 crc32 instructions
+2024-02-06 11:07:25 30988 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2024-02-06 11:07:25 30988 [Note] InnoDB: Completed initialization of buffer pool
+2024-02-06 11:07:26 30988 [Note] InnoDB: Highest supported file format is Barracuda.
+2024-02-06 11:07:26 30988 [Note] InnoDB: Starting crash recovery from checkpoint LSN=1665516
+2024-02-06 11:07:26 30988 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2024-02-06 11:07:26 30988 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2024-02-06 11:07:26 30988 [Note] InnoDB: Creating shared tablespace for temporary tables
+2024-02-06 11:07:26 30988 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2024-02-06 11:07:26 30988 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2024-02-06 11:07:26 30988 [Note] InnoDB: Waiting for purge to start
+2024-02-06 11:07:26 30988 [Note] InnoDB: 5.7.20 started; log sequence number 1665525
+2024-02-06 11:07:26 24832 [Note] InnoDB: Loading buffer pool(s) from C:\Users\kimgeonbeom\git\agent\db\data\ib_buffer_pool
+2024-02-06 11:07:26 30988 [Note] Plugin 'FEEDBACK' is disabled.
+2024-02-06 11:07:26 24832 [Note] InnoDB: Buffer pool(s) load completed at 240206 11:07:26
+2024-02-06 11:31:20 31208 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2024-02-06 11:31:20 31208 [Note] InnoDB: Uses event mutexes
+2024-02-06 11:31:20 31208 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2024-02-06 11:31:20 31208 [Note] InnoDB: Number of pools: 1
+2024-02-06 11:31:20 31208 [Note] InnoDB: Using SSE2 crc32 instructions
+2024-02-06 11:31:20 31208 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2024-02-06 11:31:20 31208 [Note] InnoDB: Completed initialization of buffer pool
+2024-02-06 11:31:20 31208 [Note] InnoDB: Highest supported file format is Barracuda.
+2024-02-06 11:31:20 31208 [Note] InnoDB: Starting crash recovery from checkpoint LSN=1665579
+2024-02-06 11:31:20 31208 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2024-02-06 11:31:20 31208 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2024-02-06 11:31:20 31208 [Note] InnoDB: Creating shared tablespace for temporary tables
+2024-02-06 11:31:20 31208 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2024-02-06 11:31:20 31208 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2024-02-06 11:31:20 31208 [Note] InnoDB: Waiting for purge to start
+2024-02-06 11:31:20 31208 [Note] InnoDB: 5.7.20 started; log sequence number 1665588
+2024-02-06 11:31:20 6568 [Note] InnoDB: Loading buffer pool(s) from C:\Users\kimgeonbeom\git\agent\db\data\ib_buffer_pool
+2024-02-06 11:31:20 31208 [Note] Plugin 'FEEDBACK' is disabled.
+2024-02-06 11:31:20 6568 [Note] InnoDB: Buffer pool(s) load completed at 240206 11:31:20
+2024-02-06 12:09:42 12824 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2024-02-06 12:09:42 12824 [Note] InnoDB: Uses event mutexes
+2024-02-06 12:09:42 12824 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2024-02-06 12:09:42 12824 [Note] InnoDB: Number of pools: 1
+2024-02-06 12:09:42 12824 [Note] InnoDB: Using SSE2 crc32 instructions
+2024-02-06 12:09:42 12824 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2024-02-06 12:09:42 12824 [Note] InnoDB: Completed initialization of buffer pool
+2024-02-06 12:09:42 12824 [Note] InnoDB: Highest supported file format is Barracuda.
+2024-02-06 12:09:42 12824 [Note] InnoDB: Starting crash recovery from checkpoint LSN=1665626
+2024-02-06 12:09:42 12824 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2024-02-06 12:09:42 12824 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2024-02-06 12:09:42 12824 [Note] InnoDB: Creating shared tablespace for temporary tables
+2024-02-06 12:09:42 12824 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2024-02-06 12:09:42 12824 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2024-02-06 12:09:42 12824 [Note] InnoDB: Waiting for purge to start
+2024-02-06 12:09:42 12824 [Note] InnoDB: 5.7.20 started; log sequence number 1665635
+2024-02-06 12:09:42 30396 [Note] InnoDB: Loading buffer pool(s) from C:\Users\kimgeonbeom\git\agent\db\data\ib_buffer_pool
+2024-02-06 12:09:42 12824 [Note] Plugin 'FEEDBACK' is disabled.
+2024-02-06 12:09:42 30396 [Note] InnoDB: Buffer pool(s) load completed at 240206 12:09:42
+2024-02-06 13:13:22 14308 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2024-02-06 13:13:22 14308 [Note] InnoDB: Uses event mutexes
+2024-02-06 13:13:22 14308 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2024-02-06 13:13:22 14308 [Note] InnoDB: Number of pools: 1
+2024-02-06 13:13:22 14308 [Note] InnoDB: Using SSE2 crc32 instructions
+2024-02-06 13:13:22 14308 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2024-02-06 13:13:22 14308 [Note] InnoDB: Completed initialization of buffer pool
+2024-02-06 13:13:22 14308 [Note] InnoDB: Highest supported file format is Barracuda.
+2024-02-06 13:13:22 14308 [Note] InnoDB: Starting crash recovery from checkpoint LSN=1665673
+2024-02-06 13:13:22 14308 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2024-02-06 13:13:22 14308 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2024-02-06 13:13:22 14308 [Note] InnoDB: Creating shared tablespace for temporary tables
+2024-02-06 13:13:22 14308 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2024-02-06 13:13:22 14308 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2024-02-06 13:13:22 14308 [Note] InnoDB: Waiting for purge to start
+2024-02-06 13:13:22 14308 [Note] InnoDB: 5.7.20 started; log sequence number 1665682
+2024-02-06 13:13:22 10044 [Note] InnoDB: Loading buffer pool(s) from C:\Users\kimgeonbeom\git\agent\db\data\ib_buffer_pool
+2024-02-06 13:13:22 14308 [Note] Plugin 'FEEDBACK' is disabled.
+2024-02-06 13:13:22 10044 [Note] InnoDB: Buffer pool(s) load completed at 240206 13:13:22
+2024-02-06 13:29:59 16484 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2024-02-06 13:29:59 16484 [Note] InnoDB: Uses event mutexes
+2024-02-06 13:29:59 16484 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2024-02-06 13:29:59 16484 [Note] InnoDB: Number of pools: 1
+2024-02-06 13:29:59 16484 [Note] InnoDB: Using SSE2 crc32 instructions
+2024-02-06 13:29:59 16484 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2024-02-06 13:29:59 16484 [Note] InnoDB: Completed initialization of buffer pool
+2024-02-06 13:29:59 16484 [Note] InnoDB: Highest supported file format is Barracuda.
+2024-02-06 13:29:59 16484 [Note] InnoDB: Starting crash recovery from checkpoint LSN=1665720
+2024-02-06 13:29:59 16484 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2024-02-06 13:29:59 16484 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2024-02-06 13:29:59 16484 [Note] InnoDB: Creating shared tablespace for temporary tables
+2024-02-06 13:29:59 16484 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2024-02-06 13:29:59 16484 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2024-02-06 13:29:59 16484 [Note] InnoDB: Waiting for purge to start
+2024-02-06 13:29:59 16484 [Note] InnoDB: 5.7.20 started; log sequence number 1665729
+2024-02-06 13:29:59 30744 [Note] InnoDB: Loading buffer pool(s) from C:\Users\kimgeonbeom\git\agent\db\data\ib_buffer_pool
+2024-02-06 13:29:59 16484 [Note] Plugin 'FEEDBACK' is disabled.
+2024-02-06 13:29:59 30744 [Note] InnoDB: Buffer pool(s) load completed at 240206 13:29:59
+2024-02-06 13:43:54 25760 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2024-02-06 13:43:54 25760 [Note] InnoDB: Uses event mutexes
+2024-02-06 13:43:54 25760 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2024-02-06 13:43:54 25760 [Note] InnoDB: Number of pools: 1
+2024-02-06 13:43:54 25760 [Note] InnoDB: Using SSE2 crc32 instructions
+2024-02-06 13:43:54 25760 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2024-02-06 13:43:54 25760 [Note] InnoDB: Completed initialization of buffer pool
+2024-02-06 13:43:54 25760 [Note] InnoDB: Highest supported file format is Barracuda.
+2024-02-06 13:43:54 25760 [Note] InnoDB: Starting crash recovery from checkpoint LSN=1665767
+2024-02-06 13:43:54 25760 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2024-02-06 13:43:54 25760 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2024-02-06 13:43:54 25760 [Note] InnoDB: Creating shared tablespace for temporary tables
+2024-02-06 13:43:54 25760 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2024-02-06 13:43:54 25760 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2024-02-06 13:43:54 25760 [Note] InnoDB: Waiting for purge to start
+2024-02-06 13:43:54 25760 [Note] InnoDB: 5.7.20 started; log sequence number 1665776
+2024-02-06 13:43:54 29148 [Note] InnoDB: Loading buffer pool(s) from C:\Users\kimgeonbeom\git\agent\db\data\ib_buffer_pool
+2024-02-06 13:43:54 25760 [Note] Plugin 'FEEDBACK' is disabled.
+2024-02-06 13:43:54 29148 [Note] InnoDB: Buffer pool(s) load completed at 240206 13:43:54
+2024-02-06 13:51:17 12068 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2024-02-06 13:51:17 12068 [Note] InnoDB: Uses event mutexes
+2024-02-06 13:51:17 12068 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2024-02-06 13:51:17 12068 [Note] InnoDB: Number of pools: 1
+2024-02-06 13:51:17 12068 [Note] InnoDB: Using SSE2 crc32 instructions
+2024-02-06 13:51:17 12068 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2024-02-06 13:51:17 12068 [Note] InnoDB: Completed initialization of buffer pool
+2024-02-06 13:51:17 12068 [Note] InnoDB: Highest supported file format is Barracuda.
+2024-02-06 13:51:17 12068 [Note] InnoDB: Starting crash recovery from checkpoint LSN=1665814
+2024-02-06 13:51:17 12068 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2024-02-06 13:51:17 12068 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2024-02-06 13:51:17 12068 [Note] InnoDB: Creating shared tablespace for temporary tables
+2024-02-06 13:51:17 12068 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2024-02-06 13:51:17 12068 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2024-02-06 13:51:17 12068 [Note] InnoDB: Waiting for purge to start
+2024-02-06 13:51:17 12068 [Note] InnoDB: 5.7.20 started; log sequence number 1665823
+2024-02-06 13:51:17 18724 [Note] InnoDB: Loading buffer pool(s) from C:\Users\kimgeonbeom\git\agent\db\data\ib_buffer_pool
+2024-02-06 13:51:17 12068 [Note] Plugin 'FEEDBACK' is disabled.
+2024-02-06 13:51:17 18724 [Note] InnoDB: Buffer pool(s) load completed at 240206 13:51:17
+2024-02-06 13:54:04 7732 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2024-02-06 13:54:04 7732 [Note] InnoDB: Uses event mutexes
+2024-02-06 13:54:04 7732 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2024-02-06 13:54:04 7732 [Note] InnoDB: Number of pools: 1
+2024-02-06 13:54:04 7732 [Note] InnoDB: Using SSE2 crc32 instructions
+2024-02-06 13:54:04 7732 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2024-02-06 13:54:04 7732 [Note] InnoDB: Completed initialization of buffer pool
+2024-02-06 13:54:05 7732 [Note] InnoDB: Highest supported file format is Barracuda.
+2024-02-06 13:54:05 7732 [Note] InnoDB: Starting crash recovery from checkpoint LSN=1665861
+2024-02-06 13:54:05 7732 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2024-02-06 13:54:05 7732 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2024-02-06 13:54:05 7732 [Note] InnoDB: Creating shared tablespace for temporary tables
+2024-02-06 13:54:05 7732 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2024-02-06 13:54:05 7732 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2024-02-06 13:54:05 7732 [Note] InnoDB: Waiting for purge to start
+2024-02-06 13:54:05 7732 [Note] InnoDB: 5.7.20 started; log sequence number 1665870
+2024-02-06 13:54:05 10080 [Note] InnoDB: Loading buffer pool(s) from C:\Users\kimgeonbeom\git\agent\db\data\ib_buffer_pool
+2024-02-06 13:54:05 7732 [Note] Plugin 'FEEDBACK' is disabled.
+2024-02-06 13:54:05 10080 [Note] InnoDB: Buffer pool(s) load completed at 240206 13:54:05
+2024-02-06 13:56:23 20128 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2024-02-06 13:56:23 20128 [Note] InnoDB: Uses event mutexes
+2024-02-06 13:56:23 20128 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2024-02-06 13:56:23 20128 [Note] InnoDB: Number of pools: 1
+2024-02-06 13:56:23 20128 [Note] InnoDB: Using SSE2 crc32 instructions
+2024-02-06 13:56:23 20128 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2024-02-06 13:56:23 20128 [Note] InnoDB: Completed initialization of buffer pool
+2024-02-06 13:56:23 20128 [Note] InnoDB: Highest supported file format is Barracuda.
+2024-02-06 13:56:23 20128 [Note] InnoDB: Starting crash recovery from checkpoint LSN=1665908
+2024-02-06 13:56:23 20128 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2024-02-06 13:56:23 20128 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2024-02-06 13:56:23 20128 [Note] InnoDB: Creating shared tablespace for temporary tables
+2024-02-06 13:56:23 20128 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2024-02-06 13:56:23 20128 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2024-02-06 13:56:23 20128 [Note] InnoDB: Waiting for purge to start
+2024-02-06 13:56:23 20128 [Note] InnoDB: 5.7.20 started; log sequence number 1665917
+2024-02-06 13:56:23 8672 [Note] InnoDB: Loading buffer pool(s) from C:\Users\kimgeonbeom\git\agent\db\data\ib_buffer_pool
+2024-02-06 13:56:23 20128 [Note] Plugin 'FEEDBACK' is disabled.
+2024-02-06 13:56:23 8672 [Note] InnoDB: Buffer pool(s) load completed at 240206 13:56:23
+2024-02-06 14:00:15 32644 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2024-02-06 14:00:15 32644 [Note] InnoDB: Uses event mutexes
+2024-02-06 14:00:15 32644 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2024-02-06 14:00:15 32644 [Note] InnoDB: Number of pools: 1
+2024-02-06 14:00:15 32644 [Note] InnoDB: Using SSE2 crc32 instructions
+2024-02-06 14:00:15 32644 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2024-02-06 14:00:15 32644 [Note] InnoDB: Completed initialization of buffer pool
+2024-02-06 14:00:15 32644 [Note] InnoDB: Highest supported file format is Barracuda.
+2024-02-06 14:00:15 32644 [Note] InnoDB: Starting crash recovery from checkpoint LSN=1665955
+2024-02-06 14:00:15 32644 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2024-02-06 14:00:15 32644 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2024-02-06 14:00:15 32644 [Note] InnoDB: Creating shared tablespace for temporary tables
+2024-02-06 14:00:15 32644 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2024-02-06 14:00:15 32644 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2024-02-06 14:00:15 32644 [Note] InnoDB: Waiting for purge to start
+2024-02-06 14:00:15 32644 [Note] InnoDB: 5.7.20 started; log sequence number 1665964
+2024-02-06 14:00:15 28728 [Note] InnoDB: Loading buffer pool(s) from C:\Users\kimgeonbeom\git\agent\db\data\ib_buffer_pool
+2024-02-06 14:00:15 32644 [Note] Plugin 'FEEDBACK' is disabled.
+2024-02-06 14:00:15 28728 [Note] InnoDB: Buffer pool(s) load completed at 240206 14:00:15
+2024-02-06 14:07:24 10856 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2024-02-06 14:07:24 10856 [Note] InnoDB: Uses event mutexes
+2024-02-06 14:07:24 10856 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2024-02-06 14:07:24 10856 [Note] InnoDB: Number of pools: 1
+2024-02-06 14:07:24 10856 [Note] InnoDB: Using SSE2 crc32 instructions
+2024-02-06 14:07:24 10856 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2024-02-06 14:07:24 10856 [Note] InnoDB: Completed initialization of buffer pool
+2024-02-06 14:07:24 10856 [Note] InnoDB: Highest supported file format is Barracuda.
+2024-02-06 14:07:24 10856 [Note] InnoDB: Starting crash recovery from checkpoint LSN=1666002
+2024-02-06 14:07:25 10856 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2024-02-06 14:07:25 10856 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2024-02-06 14:07:25 10856 [Note] InnoDB: Creating shared tablespace for temporary tables
+2024-02-06 14:07:25 10856 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2024-02-06 14:07:25 10856 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2024-02-06 14:07:25 10856 [Note] InnoDB: Waiting for purge to start
+2024-02-06 14:07:25 10856 [Note] InnoDB: 5.7.20 started; log sequence number 1666011
+2024-02-06 14:07:25 23804 [Note] InnoDB: Loading buffer pool(s) from C:\Users\kimgeonbeom\git\agent\db\data\ib_buffer_pool
+2024-02-06 14:07:25 10856 [Note] Plugin 'FEEDBACK' is disabled.
+2024-02-06 14:07:25 23804 [Note] InnoDB: Buffer pool(s) load completed at 240206 14:07:25
+2024-02-06 14:08:34 25284 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2024-02-06 14:08:34 25284 [Note] InnoDB: Uses event mutexes
+2024-02-06 14:08:34 25284 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2024-02-06 14:08:34 25284 [Note] InnoDB: Number of pools: 1
+2024-02-06 14:08:34 25284 [Note] InnoDB: Using SSE2 crc32 instructions
+2024-02-06 14:08:34 25284 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2024-02-06 14:08:34 25284 [Note] InnoDB: Completed initialization of buffer pool
+2024-02-06 14:08:34 25284 [Note] InnoDB: Highest supported file format is Barracuda.
+2024-02-06 14:08:34 25284 [Note] InnoDB: Starting crash recovery from checkpoint LSN=1666065
+2024-02-06 14:08:34 25284 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2024-02-06 14:08:34 25284 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2024-02-06 14:08:34 25284 [Note] InnoDB: Creating shared tablespace for temporary tables
+2024-02-06 14:08:34 25284 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2024-02-06 14:08:34 25284 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2024-02-06 14:08:34 25284 [Note] InnoDB: Waiting for purge to start
+2024-02-06 14:08:35 25284 [Note] InnoDB: 5.7.20 started; log sequence number 1666074
+2024-02-06 14:08:35 1012 [Note] InnoDB: Loading buffer pool(s) from C:\Users\kimgeonbeom\git\agent\db\data\ib_buffer_pool
+2024-02-06 14:08:35 25284 [Note] Plugin 'FEEDBACK' is disabled.
+2024-02-06 14:08:35 1012 [Note] InnoDB: Buffer pool(s) load completed at 240206 14:08:35
+2024-02-06 14:18:25 29176 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2024-02-06 14:18:25 29176 [Note] InnoDB: Uses event mutexes
+2024-02-06 14:18:25 29176 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2024-02-06 14:18:25 29176 [Note] InnoDB: Number of pools: 1
+2024-02-06 14:18:25 29176 [Note] InnoDB: Using SSE2 crc32 instructions
+2024-02-06 14:18:25 29176 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2024-02-06 14:18:25 29176 [Note] InnoDB: Completed initialization of buffer pool
+2024-02-06 14:18:25 29176 [Note] InnoDB: Highest supported file format is Barracuda.
+2024-02-06 14:18:25 29176 [Note] InnoDB: Starting crash recovery from checkpoint LSN=1666112
+2024-02-06 14:18:26 29176 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2024-02-06 14:18:26 29176 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2024-02-06 14:18:26 29176 [Note] InnoDB: Creating shared tablespace for temporary tables
+2024-02-06 14:18:26 29176 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2024-02-06 14:18:26 29176 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2024-02-06 14:18:26 29176 [Note] InnoDB: Waiting for purge to start
+2024-02-06 14:18:26 29176 [Note] InnoDB: 5.7.20 started; log sequence number 1666121
+2024-02-06 14:18:26 8364 [Note] InnoDB: Loading buffer pool(s) from C:\Users\kimgeonbeom\git\agent\db\data\ib_buffer_pool
+2024-02-06 14:18:26 29176 [Note] Plugin 'FEEDBACK' is disabled.
+2024-02-06 14:18:26 8364 [Note] InnoDB: Buffer pool(s) load completed at 240206 14:18:26
+2024-02-06 14:19:28 11420 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2024-02-06 14:19:28 11420 [Note] InnoDB: Uses event mutexes
+2024-02-06 14:19:28 11420 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2024-02-06 14:19:28 11420 [Note] InnoDB: Number of pools: 1
+2024-02-06 14:19:28 11420 [Note] InnoDB: Using SSE2 crc32 instructions
+2024-02-06 14:19:28 11420 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2024-02-06 14:19:28 11420 [Note] InnoDB: Completed initialization of buffer pool
+2024-02-06 14:19:28 11420 [Note] InnoDB: Highest supported file format is Barracuda.
+2024-02-06 14:19:28 11420 [Note] InnoDB: Starting crash recovery from checkpoint LSN=1666159
+2024-02-06 14:19:28 11420 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2024-02-06 14:19:28 11420 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2024-02-06 14:19:28 11420 [Note] InnoDB: Creating shared tablespace for temporary tables
+2024-02-06 14:19:28 11420 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2024-02-06 14:19:28 11420 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2024-02-06 14:19:28 11420 [Note] InnoDB: Waiting for purge to start
+2024-02-06 14:19:28 11420 [Note] InnoDB: 5.7.20 started; log sequence number 1666168
+2024-02-06 14:19:28 24700 [Note] InnoDB: Loading buffer pool(s) from C:\Users\kimgeonbeom\git\agent\db\data\ib_buffer_pool
+2024-02-06 14:19:28 11420 [Note] Plugin 'FEEDBACK' is disabled.
+2024-02-06 14:19:28 24700 [Note] InnoDB: Buffer pool(s) load completed at 240206 14:19:28
+2024-02-06 14:21:43 26120 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2024-02-06 14:21:43 26120 [Note] InnoDB: Uses event mutexes
+2024-02-06 14:21:43 26120 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2024-02-06 14:21:43 26120 [Note] InnoDB: Number of pools: 1
+2024-02-06 14:21:43 26120 [Note] InnoDB: Using SSE2 crc32 instructions
+2024-02-06 14:21:43 26120 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2024-02-06 14:21:43 26120 [Note] InnoDB: Completed initialization of buffer pool
+2024-02-06 14:21:43 26120 [Note] InnoDB: Highest supported file format is Barracuda.
+2024-02-06 14:21:43 26120 [Note] InnoDB: Starting crash recovery from checkpoint LSN=1666206
+2024-02-06 14:21:44 26120 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2024-02-06 14:21:44 26120 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2024-02-06 14:21:44 26120 [Note] InnoDB: Creating shared tablespace for temporary tables
+2024-02-06 14:21:44 26120 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2024-02-06 14:21:44 26120 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2024-02-06 14:21:44 26120 [Note] InnoDB: Waiting for purge to start
+2024-02-06 14:21:44 26120 [Note] InnoDB: 5.7.20 started; log sequence number 1666215
+2024-02-06 14:21:44 3600 [Note] InnoDB: Loading buffer pool(s) from C:\Users\kimgeonbeom\git\agent\db\data\ib_buffer_pool
+2024-02-06 14:21:44 26120 [Note] Plugin 'FEEDBACK' is disabled.
+2024-02-06 14:21:44 3600 [Note] InnoDB: Buffer pool(s) load completed at 240206 14:21:44
+2024-02-06 14:32:32 9516 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2024-02-06 14:32:32 9516 [Note] InnoDB: Uses event mutexes
+2024-02-06 14:32:32 9516 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2024-02-06 14:32:32 9516 [Note] InnoDB: Number of pools: 1
+2024-02-06 14:32:32 9516 [Note] InnoDB: Using SSE2 crc32 instructions
+2024-02-06 14:32:32 9516 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2024-02-06 14:32:32 9516 [Note] InnoDB: Completed initialization of buffer pool
+2024-02-06 14:32:32 9516 [Note] InnoDB: Highest supported file format is Barracuda.
+2024-02-06 14:32:32 9516 [Note] InnoDB: Starting crash recovery from checkpoint LSN=1666253
+2024-02-06 14:32:32 9516 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2024-02-06 14:32:32 9516 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2024-02-06 14:32:32 9516 [Note] InnoDB: Creating shared tablespace for temporary tables
+2024-02-06 14:32:32 9516 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2024-02-06 14:32:32 9516 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2024-02-06 14:32:32 9516 [Note] InnoDB: Waiting for purge to start
+2024-02-06 14:32:32 9516 [Note] InnoDB: 5.7.20 started; log sequence number 1666262
+2024-02-06 14:32:32 28448 [Note] InnoDB: Loading buffer pool(s) from C:\Users\kimgeonbeom\git\agent\db\data\ib_buffer_pool
+2024-02-06 14:32:32 9516 [Note] Plugin 'FEEDBACK' is disabled.
+2024-02-06 14:32:32 28448 [Note] InnoDB: Buffer pool(s) load completed at 240206 14:32:32
+2024-02-06 15:06:43 32168 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2024-02-06 15:06:43 32168 [Note] InnoDB: Uses event mutexes
+2024-02-06 15:06:43 32168 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2024-02-06 15:06:43 32168 [Note] InnoDB: Number of pools: 1
+2024-02-06 15:06:43 32168 [Note] InnoDB: Using SSE2 crc32 instructions
+2024-02-06 15:06:43 32168 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2024-02-06 15:06:43 32168 [Note] InnoDB: Completed initialization of buffer pool
+2024-02-06 15:06:43 32168 [Note] InnoDB: Highest supported file format is Barracuda.
+2024-02-06 15:06:43 32168 [Note] InnoDB: Starting crash recovery from checkpoint LSN=1666300
+2024-02-06 15:06:43 32168 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2024-02-06 15:06:43 32168 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2024-02-06 15:06:43 32168 [Note] InnoDB: Creating shared tablespace for temporary tables
+2024-02-06 15:06:43 32168 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2024-02-06 15:06:43 32168 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2024-02-06 15:06:43 32168 [Note] InnoDB: Waiting for purge to start
+2024-02-06 15:06:43 32168 [Note] InnoDB: 5.7.20 started; log sequence number 1666309
+2024-02-06 15:06:43 15940 [Note] InnoDB: Loading buffer pool(s) from C:\Users\kimgeonbeom\git\agent\db\data\ib_buffer_pool
+2024-02-06 15:06:43 32168 [Note] Plugin 'FEEDBACK' is disabled.
+2024-02-06 15:06:43 15940 [Note] InnoDB: Buffer pool(s) load completed at 240206 15:06:43
