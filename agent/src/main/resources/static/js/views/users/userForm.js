@@ -68,6 +68,18 @@ $(document).ready(function() {
 
   //폼 초기화
   fnFormHandler(true);
+  /*const flatList = [
+    { id: 1, name: 'Node 1', parentId: null },
+    { id: 2, name: 'Node 2', parentId: 1 },
+    { id: 3, name: 'Node 3', parentId: 1 },
+    { id: 4, name: 'Node 4', parentId: 2 },
+    { id: 5, name: 'Node 5', parentId: 2 },
+    { id: 6, name: 'Node 6', parentId: 4 },
+    { id: 7, name: 'Node 7', parentId: null },
+    { id: 8, name: 'Node 8', parentId: 7 }
+];
+  const _trees  = new Trees({list : flatList});
+  console.info(_trees);*/
 });
 
 /**
