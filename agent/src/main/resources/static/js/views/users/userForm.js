@@ -1,162 +1,160 @@
-let grid = null;
+let _grid = null;
+let _form = null;
 
-$(document).ready(function(){
-	
-	//폼 초기화
-	Forms.init("userForm");
-	
-	grid = new Grids({
-		target : "example",
-		lengthChange : true,
-		searching: true,
-		ordering:true,
-		info:true,
-		/*processing: true,
-    	serverSide: true,*/
-		//pageResize: true,
-		//paging:true,
-		paging: false,
-	    scrollCollapse: true,
-	    scrollY: '55vh',
-		ajax: {
-	        'url':'/users/list',
-	        'type' : "GET", 
-	        'dataSrc':'list',
-	        'error' : (a,b,c,d,e)=>{
-				console.info(a,b,c,d,e);
-			}
-	    },	    
-	    columns: [
-	        {"data": "userCd"},
-	        {"data": "userNm"},
-	        {"data": "userSts"}, 
-	        {"data": "userPh"},
-	        {"data": "updatedDt"},
-	        {"data": "updatedNm"}
-	    ],
-	    "language": {
-	        "emptyTable": "검색된 데이터가 없습니다.",
-	        "lengthMenu": "페이지당 _MENU_ 개씩 보기",
-	        "info": "현재 _START_ - _END_ / _TOTAL_건",
-	        "infoEmpty": "검색된 데이터가 없습니다.",
-	        "infoFiltered": "( _MAX_건의 데이터에서 검색됨 )",
-	        "search": "검색: ",
-	        "zeroRecords": "검색된 데이터가 없습니다.",
-	        "loadingRecords": "로딩중...",
-	        "processing": "잠시만 기다려 주세요...",
-	        "paginate": {
-	            "next": "다음",
-	            "previous": "이전"
-	        },
-	        "select": {
-                "rows": {
-                    "_": "%개행 선택",
-                    "0": "",
-                    "1": ""
-                } 
-	        }
-	    },
-	    /*columnDefs:[
-			{targets:0,visible:false}
-		],*/
-		/*lengthMenu : [10,20],
-		diplayLength:20,*/
-		select: {
-	          style: 'single'
-	    }
-	});
-	
-	console.info(grid.table)
-	
-	
-	//이벤튼 핸들러
-	Forms.event("userCont",{
-		"chkIdBtn"  : {evt : "click", 
-						fn : (e) => {
-							console.info(e);
-						}},
-		"reloadBtn" : {evt : "click", 
-						fn : (e) => {
-							grid.reload(() => {
-								Forms.clear("userForm");
-							});
-						}},
-		"example" 	: {evt : "click", 
-					  deli : 'tbody tr',
-						fn : (e,tObj) => {							
-							const data = grid.getRow(e.currentTarget);									
-							fnRowSelect(data["userCd"]);
-						}},
-	});
-	
-	/**
-	            pageLength: 3,
-                pagingType : "full_numbers",
-                bPaginate: true,
-                bLengthChange: true,
-                lengthMenu : [ [ 1, 3, 5, 10, -1 ], [ 1, 3, 5, 10, "All" ] ],
-                responsive: true,
-                bAutoWidth: false,
-                processing: true,
-                ordering: true,
-                bServerSide: true,
-                searching: false,
-           		ajax : {
-                    "url":"/getUserList.do",
-                    "type":"POST",
-                    "data": function (d) {
-                        d.userStatCd = "NR";
-                    }
-                },
-                sAjaxSource : "/getUserList.do?userStatCd=NR&columns="+columns,
-                sServerMethod: "POST",
-                columns : [
-                    {data: "email"},
-                    {data: "fullNmKr"},
-                    {data: "userStatCd"},
-                    {data: "superUser"}
-                ],
-                
-                columnDefs : [
-                    {
-                        "targets": [0,1,3],
-                        "visible": true,
-                    },
-                    {
-                        "targets": 2,
-                        "visible": false,
-                    },
-                ]
- */
+$(document).ready(function() {
+  
+  _form = new Forms({
+    "target": "userForm"
+    , "vrules": {
+      userCd : { type : "required"},
+      userNm : { type : "required"},
+      userSts: { type : "required"},
+      userPh : { type : "phone"}
+    }
+    , "event": {
+      "chkIdBtn": {
+        fn: (e) => {
+          console.info(e);
+        }
+      },
+      "newBtn": {
+        fn: (e) => {
+          fnAddUser();
+        }
+      },
+      "canBtn": {
+        fn: (e) => {
+          //폼 초기화
+          fnFormHandler(true);
+        }
+      },
+      "saveBtn": {
+        fn: (e) => {
+          fnRowSave();
+        }
+      },
+      "delBtn": {
+        fn: (e) => {
+          fnAddUser();
+        }
+      }
+    }
+  });
+
+  let columns = [{ key: "userCd", label: "ID", align: "center" }
+    , { key: "userNm", label: "이름", align: "left" }
+    , { key: "userSts", label: "상태", align: "center" }
+    , { key: "userPh", label: "휴대폰", align: "center" }
+    , { key: "updatedDt", label: "최종수정일시", align: "center" }
+    , { key: "updatedNm", label: "최종수정자", align: "left" }
+  ];
+
+  _grid = new Grids({
+    target: "example",
+    url: '/user/list',
+    data : {delYn : "N"},
+    columns: columns,
+    paging: false,
+    reload: {
+      btn: $("#reloadBtn"),
+      fn: () => {
+        fnFormHandler(true);
+      }
+    },
+    click: (e, data, _grid) => {
+      fnRowSelect(data["userCd"]);
+    }
+  });
+
+  //폼 초기화
+  fnFormHandler(true);
 });
 
-
-const fnRowSelect = (userCd) => {
-	Utils.ajax({
-		url  : `/users/${userCd}`,
-		type : "GET",
-		success : function(res){
-			const data = res.data;
-			if(!Utils.isEmptyObject(data)){
-				Forms.set("userForm",data);	
-			}
-		}
-	});
+/**
+ * 폼 초기화
+ */
+const fnFormHandler = (disabled, data) => {
+  _form.find("input,select").attr("disabled", disabled);
+  _form.find("#chkIdBtn").hide();
+  _form.find("button:visible").attr("disabled",true);  
+  //비활성화
+  if (disabled) {
+    //폼 초기화
+    _form.find("#newBtn").attr("disabled",false);
+    _form.clear();
+  } else {
+    //데이터 세팅
+    _form.set(data);
+    _form.find("#saveBtn,#canBtn").attr("disabled",false);
+    //저장된데이터
+    if (data.saveFlag === "N") {
+      _form.find("#chkIdBtn").show();
+      _form.find("#delBtn,#newBtn").attr("disabled",true);
+      _form.find("#userCd").attr("disabled", false);
+    } else {
+      _form.find("#delBtn").attr("disabled",false);
+      _form.find("#userCd").attr("disabled", true);
+    }
+  }
 }
 
-const fnRowSave = () => {
-	let data = $("userForm").get();
-	Forms.get("userForm");
-		
-	Utils.ajax({
-		url  : `/users/${userCd}`,
-		type : "PUT",
-		data : data ,
-		success : function(data){
-			if(!Utils.isEmptyObject(data)){
-				Forms.set("userForm",data);	
-			}
-		}
-	});
+
+/**
+ * 사용자 상세
+ */
+const fnAddTest = () => {
+  Utils.ajax({
+    url: `/user`,
+    type: "PUT",
+    success: function(res) {
+      _grid.reload();
+    }
+  });
+}
+
+/**
+ * 사용자 상세
+ */
+const fnRowSelect = (userCd) => {
+  Utils.ajax({
+    url: `/user/${userCd}`,
+    type: "GET",
+    success: function(res) {
+      const data = res.data;
+      if (!Utils.isEmptyObject(data)) {
+        fnFormHandler(false, data);
+      }
+    }
+  });
+}
+
+/**
+ * 사용자 정보 저장
+ */
+const fnRowSave = (delYn) => {
+  if(!_form.validate()){
+    return;
+  }
+  confirm("저장하시겠습니까?", () =>{
+    console.info(arguments);
+    Utils.ajax({
+      url: `/user/${userCd}`,
+      type: "PUT",
+      data: _form.get(),
+      success: function(data) {
+        if (!Utils.isEmptyObject(data)) {
+          _form.set(data);
+        }
+      }
+    });
+  })
+};
+
+/**
+ * 사용자 신규
+ */
+const fnAddUser = () => {
+  //폼 초기화
+  fnFormHandler(false, { "saveFlag": "N" });
 }
 

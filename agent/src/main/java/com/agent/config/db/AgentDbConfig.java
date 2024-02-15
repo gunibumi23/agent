@@ -2,6 +2,7 @@ package com.agent.config.db;
 
 import javax.sql.DataSource;
 
+import org.apache.ibatis.plugin.Interceptor;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.mybatis.spring.annotation.MapperScan;
@@ -11,6 +12,7 @@ import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.transaction.PlatformTransactionManager;
 
+import com.agent.common.interceptor.ParamInterceptor;
 import com.agent.config.AgentConstans;
 import com.agent.config.AgentProperties;
 import com.agent.factory.ReloadSqlFactory;
@@ -25,7 +27,8 @@ import lombok.RequiredArgsConstructor;
 public class AgentDbConfig {
 	
 	private final AgentProperties agentProperties;
-
+	private final ParamInterceptor paramInterceptor;
+	
     @Bean
     public HikariConfig hikariConfig() {
         return agentProperties.getHikaricp();
@@ -46,6 +49,7 @@ public class AgentDbConfig {
         sqlSessionFactoryBean.setConfigLocation(resolver.getResource("classpath:mybatis/mybatis-config.xml"));
         sqlSessionFactoryBean.setMapperLocations(resolver.getResources("classpath:mybatis/mapper/**/*Mapper.xml"));
         sqlSessionFactoryBean.setInterval(1000);
+        sqlSessionFactoryBean.setPlugins(new Interceptor[]{paramInterceptor});
         
         return sqlSessionFactoryBean.getObject();
     }

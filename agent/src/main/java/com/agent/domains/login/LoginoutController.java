@@ -4,7 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.extern.slf4j.Slf4j;
@@ -12,22 +12,21 @@ import lombok.extern.slf4j.Slf4j;
 
 @Controller
 @Slf4j
+@RequestMapping("/login")
 public class LoginoutController {
 	
-	@GetMapping("/login/form")
+	@GetMapping("/form")
 	public String login(Model model,HttpServletRequest req) {
 		log.info("{}",req.getHeaders("x-requested-with"));
 		return "login";
 	}
 	
-	@GetMapping("/login/{rslt}")
-	public ModelAndView loginHandle(@PathVariable String rslt,Model model,HttpServletRequest req) {
-		ModelAndView mv = new ModelAndView();
+	@GetMapping("/{rslt}")
+	public String loginHandle(@PathVariable String rslt,Model model) {		
 		if("expired".equalsIgnoreCase(rslt)) {			
-			mv.setViewName("/login");
+			return "/erros/error";
 		}else {
-			mv.setViewName("/domains/tables");
-		}
-		return mv; 
+			return "/domains/tables";
+		} 
 	}
 }

@@ -10,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,43 +23,18 @@ import lombok.RequiredArgsConstructor;
 
 
 @Controller
-@RequestMapping("/users")
+@RequestMapping("/user")
 @RequiredArgsConstructor
 public class UserController {
 	
 	private final UserService userService;
 	
+	private int idx = 0;
+	
 	
 	@GetMapping("/form")
 	public String form(@RequestParam Map<String,Object> params,Model model) {
-		
-		List<Map<String,Object>> authBtns = new ArrayList<Map<String,Object>>();
-		Map<String,Object> btnMap = new HashMap<String,Object>();
-		btnMap.put("btnCd"  ,"users.save");
-		btnMap.put("btnNm"  ,"저장");
-		btnMap.put("btnType","SAVE");
-		authBtns.add(btnMap);
-		
-		btnMap = new HashMap<String,Object>();
-		btnMap.put("btnCd"  ,"users.new");
-		btnMap.put("btnNm"  ,"신규");
-		btnMap.put("btnType","NEW");
-		authBtns.add(btnMap);
-		
-		btnMap = new HashMap<String,Object>();
-		btnMap.put("btnCd"  ,"users.init");
-		btnMap.put("btnNm"  ,"취소");
-		btnMap.put("btnType","INIT");
-		authBtns.add(btnMap);
-		
-		btnMap = new HashMap<String,Object>();
-		btnMap.put("btnCd"  ,"users.delete");
-		btnMap.put("btnNm"  ,"삭제");
-		btnMap.put("btnType","DEL");
-		authBtns.add(btnMap);
-		
-		model.addAttribute("authBtns",authBtns);
-		return "/users/userForm";
+		return "/domains/users/userForm";
 	}
 	
 	/**
@@ -84,12 +60,29 @@ public class UserController {
 	}
 	
 	
+	
+	@PutMapping
+	public ResponseEntity<ResultData> test() {
+		Map<String,Object> user = null;
+		int edIdx = idx + 10000;
+		for(int i=idx;i<edIdx;i++) {
+			user = new HashMap<String,Object>();
+			user.put("userCd" , "testUser" + i);
+			user.put("userNm" , "유저_" + i);
+			user.put("userPw" , "$2a$11$3aacVZKjRadCAGpaUTSnk.A74qLrQIynhEk28qK6k4MyzK4z7b9Au_");			
+			user.put("userSts", "NORMAL");
+			userService.mergeUserInfo(user);
+			idx = i;
+		}
+		return ResponseEntity.ok(new ResultData(ApiResultEnum.SUCCESS));
+	}
+	
 	/**
 	 * 
 	 * @param params
 	 * @return
 	 */
-	@PutMapping	
+	@PostMapping	
 	public ResponseEntity modify(@RequestBody Map<String,Object> params) {
 		return ResponseEntity.ok("");
 	}

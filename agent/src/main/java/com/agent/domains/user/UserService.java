@@ -6,6 +6,7 @@ import java.util.Map;
 
 import org.springframework.cache.CacheManager;
 import org.springframework.cache.annotation.CacheConfig;
+import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -27,9 +28,9 @@ public class UserService implements UserDetailsService {
 	
 	private final BCryptPasswordEncoder bCryptPasswordEncoder;
 	
-	private final CacheManager cacheManager;
-	
 	private final UserMapper userMapper;
+	
+	public static final String KEY = "params.userCd";
 	/**
 	 * 사용자 인증
 	 */
@@ -73,7 +74,7 @@ public class UserService implements UserDetailsService {
 	 * @param params
 	 * @return
 	 */
-	@Cacheable(key = "#params.userCd")
+	@Cacheable(key = "#root.target.KEY")
 	public Map<String,Object> selectUserInfo(Map<String,Object> params){
 		return userMapper.selectUserInfo(params);
 	}
@@ -83,8 +84,9 @@ public class UserService implements UserDetailsService {
 	 * @param params
 	 * @return
 	 */
-	@CachePut(key = "#params.userCd")
-	public int mergeUserInfo(Map<String,Object> params){
-		return userMapper.mergeUserInfo(params);
+	@CachePut(key = "#root.target.KEY")
+	public Map<String,Object> mergeUserInfo(Map<String,Object> params){
+		userMapper.mergeUserInfo(params);
+		return params;
 	}
 }

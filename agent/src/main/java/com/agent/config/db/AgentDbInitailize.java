@@ -32,8 +32,7 @@ public class AgentDbInitailize {
 		String libPath  = basePath + File.separator + "lib";
 		String dataPath = basePath + File.separator + "data";
 		try {
-			new Socket(HOST,PORT).close();
-			log.info("================================ > {} : {}" , HOST,PORT);
+			new Socket(HOST,PORT).close();			
 		}catch(IOException e) {
 			log.error(e.getMessage());
 			MariaDB4jSpringService schema = new MariaDB4jSpringService();
@@ -49,11 +48,9 @@ public class AgentDbInitailize {
 			String pwd   = "@" +  dbNm;
 			
 			DB db = schema.getDB();
-			
 			try {
 				log.info("Schema : {}, User : {} ",query,user);
-				db.run(query, user, pwd);			
-				
+				db.run(query, user, pwd);
 				db.source("sql/init.sql",user,pwd,dbNm);
 			} catch (ManagedProcessException e1) {
 				log.error(e1.getMessage());

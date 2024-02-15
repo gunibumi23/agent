@@ -2,44 +2,8 @@
 <html lang="ko"
       xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
->
-      
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>SB Admin 2 - Blank</title>
-    
-    <link th:href="@{/vendor/fontawesome-free/css/all.min.css}" rel="stylesheet" th:inline="css">        
-    <link th:href="@{/css/sb-admin-2.min.css}" rel="stylesheet" th:inline="css">
-	<link th:href="@{/vendor/datatables-backup1/DataTables-1.13.8/css/dataTables.bootstrap.min.css}" rel="stylesheet" th:inline="css">
-	<link th:href="@{/vendor/datatables-backup1/Select-1.7.0/css/select.bootstrap4.css}" rel="stylesheet" th:inline="css">
-	
-    <!-- Bootstrap core JavaScript-->
-    <script th:inline="javascript" th:src="@{/vendor/jquery/jquery.min.js}"></script>
-    <script th:inline="javascript" th:src="@{/vendor/jquery-serialize/jquery.serializeObject.min.js}"></script>
-    
-    <script th:inline="javascript" th:src="@{/vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
-    <script th:inline="javascript" th:src="@{/vendor/jquery-easing/jquery.easing.min.js}"></script>
-    
-    <!-- Page level plugins -->
-    <script th:inline="javascript" th:src="@{/vendor/datatables-backup1/DataTables-1.13.8/js/jquery.dataTables.min.js}"></script>
-    <script th:inline="javascript" th:src="@{/vendor/datatables-backup1/DataTables-1.13.8/js/dataTables.bootstrap4.min.js}"></script>
-    <script th:inline="javascript" th:src="@{/vendor/datatables-backup1/Select-1.7.0/js/select.bootstrap4.min.js}"></script>
-    <script th:inline="javascript" th:src="@{/vendor/datatables-backup1/Select-1.7.0/js/dataTables.select.js}"></script>
-    
-    <script th:inline="javascript" th:src="@{/js/views/common/common.js}"></script>
-    <script th:inline="javascript" th:src="@{/js/views/common/form.js}"></script>
-    <script th:inline="javascript" th:src="@{/js/views/common/message.js}"></script>
-    <script th:inline="javascript" th:src="@{/js/views/common/grid.js}"></script>
-    
-    <style >
-		
-    </style>
-    <!-- Page level custom scripts -->
-</head>
+>     
+<th:block th:include="layouts/layout-head :: head"></th:block>
 <body id="page-top">
     <!-- Page Wrapper -->
     <div id="wrapper">

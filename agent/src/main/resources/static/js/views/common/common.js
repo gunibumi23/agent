@@ -1,7 +1,8 @@
 const Utils = {
 	ajax : (params) => {
-		const url   = params.url;
-		if(url) {			
+		let url   = params.url;
+		if(url) {	
+			url = Utils.getUrl(url);
 			const type     = Utils.nvl(params.type    ,"POST");
 			const dataType = Utils.nvl(params.dataType,"json");
 			const async    = Utils.nvl(params.async   ,true);
@@ -22,21 +23,24 @@ const Utils = {
 				data,
 				error : (xhr, status, error) => {
 					let resData  = xhr.responseJSON;
-					if(typeof resData == "string"){
-						resData = JSON.parse(resData);
-					}
-					const message = Utils.nvl(resData.message,"오류가 발생하였습니다.\n관리자에게 문의해주세요.");
-					if(message === "SESSION_EXPIRED"){
-						Msgs.alert("세션이 만료되었습니다. 다시로그인 해주시기 바랍니다.",() => {
-							Utils.loadMask(false);
-							location.href = '/login'
-						});
+					if(resData){
+  					if(typeof resData == "string"){
+  						resData = JSON.parse(resData);
+  					}
+  					const message = Utils.nvl(resData.message,"오류가 발생하였습니다.\n관리자에게 문의해주세요.");  					
+  					if(message === "SESSION_EXPIRED"){
+  						Msgs.alert("세션이 만료되었습니다. 다시로그인 해주시기 바랍니다.",() => {
+  							Utils.loadMask(false);
+  							location.href = Utils.getUrl('/login');
+  						});
+  					}else{
+  						Msgs.alert(message,() => {
+  							Utils.loadMask(false);							
+  						});
+  					}
 					}else{
-						Msgs.alert(message,() => {
-							Utils.loadMask(false);							
-						});
-					}
-					console.info(resData);	
+            Utils.loadMask(false);
+          }
 				},
 				beforeSend: function(xhr) {
 					Utils.loadMask(true);
@@ -96,6 +100,12 @@ const Utils = {
 		}else{
 			if(obj.hasClass("show")) $(".agent-spinner").removeClass("show");	
 		}
+	},
+	deepCopy : (data) => {
+		return $.extend(true, {}, data);
+	},
+	getUrl : (url) => {
+		return CONTEXT_PATH + url;
 	}
 } 
 

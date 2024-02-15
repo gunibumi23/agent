@@ -18,6 +18,7 @@ public class UserDetailData implements UserDetails {
 	private String userPh;
 	private String useYn;
 	private String delYn;
+	private String saveFlag;
 	private String createdDt;
 	private String createdCd;
 	private String createdNm;

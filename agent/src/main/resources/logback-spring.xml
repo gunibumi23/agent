@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<configuration>
+<configuration  scan="true" scanPeriod="10 seconds">
     <!-- 로그 패턴에 색상 적용 %clr(pattern){color}
         https://logback.qos.ch/manual/layouts.html#coloring
     -->

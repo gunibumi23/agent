@@ -27,37 +27,41 @@ import com.agent.common.enums.ApiResultEnum;
 import com.agent.common.enums.LoginFailureEnum;
 import com.agent.common.enums.ResCodeEnum;
 import com.agent.common.util.ObjectUtil;
+import com.agent.common.util.RequestUtil;
 
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
 @Configuration
 @EnableWebSecurity
 @EnableCaching
 @Slf4j
+@RequiredArgsConstructor
 public class AgentWebSecurity {
 	
 	private final String LOGIN_OUT   = "/logout";
 	private final String LOGIN_FORM  = "/login/form";
 	private final String LOGIN_CHECK = "/login/check";
-	
 	private final String[] SKIP_URL = new String[]{"/vendor/**"
 												  ,"/css/**"
 												  ,"/js/**"					
 												  ,"/errors/**"
 												  ,"/login/check"};
+	
 
     @Bean
     SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
     	
+    	
+    	
         http
         		.sessionManagement(session -> session
         			.maximumSessions(1)
-        			.maxSessionsPreventsLogin(false)
-        			.expiredUrl("/login/expired")        			
+        			.maxSessionsPreventsLogin(false)        			
         		)
         		.csrf(AbstractHttpConfigurer::disable)       		
 				/*
@@ -153,7 +157,7 @@ public class AgentWebSecurity {
 
 		@Override
 		public void commence(HttpServletRequest req, HttpServletResponse res,AuthenticationException excp) throws IOException, ServletException {			
-			if(this.isAjax(req)) {
+			if(RequestUtil.isAjax(req)) {
 				ResultData rslt = new ResultData(ApiResultEnum.ERROR,"SESSION_EXPIRED");
 				res.setContentType(MediaType.APPLICATION_JSON_VALUE);
 		        res.setStatus(HttpStatus.UNAUTHORIZED.value());
@@ -163,14 +167,6 @@ public class AgentWebSecurity {
 				RequestDispatcher dispt = req.getRequestDispatcher(fwUrl);
 				dispt.forward(req, res);
 			}
-		}
-		
-		protected boolean isAjax(HttpServletRequest req) {
-			String xHeader = req.getHeader("x-requested-with");
-			if("XMLHttpRequest".equalsIgnoreCase(xHeader)){
-				return true;
-			}
-			return false;
 		}
     }
 }

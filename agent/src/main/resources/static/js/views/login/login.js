@@ -1,22 +1,55 @@
+let _form = null;
+
+/**
+ * 로그인
+ */
 const fnLogin = () => {
-	Utils.ajax({
-		url  : "/login/check",
-		data : $("form").serialize(),
-		success : function(res){
-			const code = res.code;
-			if(code === "SUCCESS") {
-				location.href = res.redirect;
-			}
-		}
-	});
-	/*let form = $("form");
-	form.attr("action","/login/check");
-	form.attr("method","POST");
-	form.submit();*/
+  
+  if(_form.validate()){
+    Utils.ajax({
+        url: "/login/check",
+        data: _form.get(),
+        success: function(res) {
+          const code = res.code;
+          if (code === "SUCCESS") {
+            location.href = Utils.getUrl(res.redirect);
+          }else{
+            alert(res.message)
+          }
+        }
+      });
+    }
 }
 
-$(document).ready( () =>  {
-	$("#loginBtn").click(function(){
-		fnLogin();
-	});
+$(document).ready(() => {
+  //폼정의
+  _form = new Forms({
+    "target"   : "login",
+    "vrules" : {
+        userCd : {type : "required"},
+        userPw : {type : "required"}      
+    },
+    "event": {
+      "loginBtn": {
+        fn: (e) => {
+          fnLogin();
+        }
+      },
+      "input": {
+        evt: "keyup",
+        fn: (e) => {
+          if (e.key == "Enter") {
+            const target = $(e.target);
+            const name = target.prop("name");
+            if (name === "userCd") {
+              $("[name=userPw]").focus();
+            } else if (name === "userPw") {
+              fnLogin();
+            }
+          }
+        }
+      }
+    }
+  });
+  $("#userCd").focus();
 })

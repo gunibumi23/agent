@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <th:block th:fragment="head">
+	<head>
+	    <meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	    <meta name="description" content="">
+	    <meta name="author" content="">
+	    <title>SB Admin 2 - Blank</title>
+	    
+           
+	    <link th:href="@{/vendor/fontawesome-free/css/all.min.css}" rel="stylesheet" th:inline="css">
+		  <link th:href="@{/vendor/datatables/datatables.min.css}" rel="stylesheet" th:inline="css">
+		  <link th:href="@{/vendor/bootstrap/css/bootstrap-treeview.css}" rel="stylesheet" th:inline="css">
+		  <link th:href="@{/css/sb-admin-2.min.css}" rel="stylesheet" th:inline="css">
+		  <link th:href="@{/css/agent.css}" rel="stylesheet" th:inline="css">
+		  
+		  <style type="text/css">
+		  </style>
+		
+	    <!-- Bootstrap core JavaScript-->
+	    <script th:inline="javascript" th:src="@{/vendor/jquery/jquery.min.js}"></script>
+	    <script th:inline="javascript" th:src="@{/vendor/jquery-serialize/jquery.serializeObject.min.js}"></script>
+	    <script th:inline="javascript" th:src="@{/vendor/jquery-validation-1.19.5/dist/jquery.validate.min.js}"></script>
+	    
+	    
+	    <script th:inline="javascript" th:src="@{/vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
+	    <script th:inline="javascript" th:src="@{/vendor/jquery-easing/jquery.easing.min.js}"></script>
+	    
+	    <!-- Page level plugins -->
+	    <script th:inline="javascript" th:src="@{/vendor/datatables/datatables.min.js}"></script>
+	    
+	    <script th:inline="javascript" th:src="@{/js/views/common/common.js}"></script>
+	    <script th:inline="javascript" th:src="@{/js/views/common/validate.js}"></script>
+	    <script th:inline="javascript" th:src="@{/js/views/common/form.js}"></script>
+	    <script th:inline="javascript" th:src="@{/js/views/common/message.js}"></script>
+	    <script th:inline="javascript" th:src="@{/js/views/common/grid.js}"></script>
+	    
+	    <script src="https://cdn.datatables.net/plug-ins/1.13.7/filtering/row-based/TableTools.ShowSelectedOnly.js"></script>
+	    
+	    <script type="text/javascript">
+	    	let CONTEXT_PATH = '/' + '[[@{/}]]'.replace(/\//g,'');
+	    	if(CONTEXT_PATH === "/") {
+	    		CONTEXT_PATH = "";
+	    	}
+	    </script>
+	    <!-- Page level custom scripts -->
+	</head>
+  </th:block>
+</html>

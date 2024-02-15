@@ -1,27 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
-  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">  
-	<mapper namespace="com.agent.domains.user.UserMapper">
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.agent.domains.user.UserMapper">
 	<sql id="selectUserQuery">
-		SELECT 
-			   A.USER_CD
-			  ,A.USER_PW
-			  ,A.USER_NM
-			  ,A.USER_STS
-			  ,A.TEAM_CD
-			  ,A.USER_PH
-			  ,A.DEL_YN
-			  ,DATE_FORMAT(A.CREATED_DT,'%Y-%m-%d %H:%i:%s') CREATED_DT
-			  ,A.CREATED_CD
-			  ,(SELECT USER_NM FROM USERS WHERE USER_CD = A.CREATED_CD) CREATED_NM
-			  ,DATE_FORMAT(A.UPDATED_DT,'%Y-%m-%d %H:%i:%s') UPDATED_DT
-			  ,A.UPDATED_CD
-			  ,(SELECT USER_NM FROM USERS WHERE USER_CD = A.UPDATED_CD) UPDATED_NM
-		FROM USERS A		
+		SELECT
+		A.USER_CD
+		,A.USER_PW
+		,A.USER_NM
+		,A.USER_STS
+		,A.TEAM_CD
+		,A.USER_PH
+		,A.DEL_YN
+		,DATE_FORMAT(A.CREATED_DT,'%Y-%m-%d %H:%i:%s') CREATED_DT
+		,A.CREATED_CD
+		,(SELECT USER_NM FROM USERS WHERE USER_CD = A.CREATED_CD) CREATED_NM
+		,DATE_FORMAT(A.UPDATED_DT,'%Y-%m-%d %H:%i:%s') UPDATED_DT
+		,A.UPDATED_CD
+		,(SELECT USER_NM FROM USERS WHERE USER_CD = A.UPDATED_CD) UPDATED_NM
+		,'Y' AS SAVE_FLAG
+		FROM USERS A
 	</sql>
-	
-	<select id="selectUserList" parameterType="agentMap" resultType="agentMap">
+
+	<select id="selectUserList" parameterType="agentMap"
+		resultType="agentMap">
 		/** selectUserList **/
 		<include refid="selectUserQuery"></include>
 		<where>
@@ -36,7 +38,7 @@
 			</if>
 			<if test="userPh != '' and userPh != null">
 				A.USER_PH = #{userPh}
-			</if>			
+			</if>
 			<if test="delYn != '' and delYn != null">
 				A.DEL_YN = #{delYn}
 			</if>
@@ -44,52 +46,52 @@
 				A.USER_STS = #{userSts}
 			</if>
 		</where>
-		ORDER BY A.USER_CD 
+		ORDER BY A.USER_CD
 	</select>
-	
-	<select id="selectUserInfo" parameterType="agentMap" resultType="agentMap">
+
+	<select id="selectUserInfo" parameterType="agentMap"
+		resultType="agentMap">
 		/** selectUserInfo **/
 		<include refid="selectUserQuery"></include>
 		WHERE USER_CD = #{userCd}
 	</select>
-	
-	<update id="updateUserInfo" parameterType="agentMap">
+
+	<update id="mergeUserInfo" parameterType="agentMap">
 		/** updateUserInfo **/
-		INSERT INTO USERS 
+		INSERT INTO USERS
 		(
-			 USER_CD
-			,USER_PW
-			,USER_NM
-			,USER_STS
-			,TEAM_CD
-			,USER_PH
-			,USE_YN
-			,DEL_YN
-			,CREATED_DT
-			,CREATED_CD
-			,UPDATED_DT
-			,UPDATED_CD
-	    )
-	    VALUES
-	    (
-	         #{userCd}
-			,#{userPw}
-			,#{userNm}
-			,#{userSts}
-			,#{teamCd}
-			,#{userPh}
-			,#{delYn}
-			,#{createdDt}
-			,#{createdCd}
-			,#{updatedDt}
-			,#{updatedCd}
-	    )
-	    ON DUPLICATE KEY UPDATE
-			 USER_NM    = #{userNm}
-			,USER_STS   = #{userSts}
-			,TEAM_CD    = #{teamCd}
-			,USER_PH    = #{userPh}
-			,UPDATED_DT = NOW()
-			,UPDATED_CD = #{updatedCd}
+		USER_CD
+		,USER_PW
+		,USER_NM
+		,USER_STS
+		,TEAM_CD
+		,USER_PH
+		,DEL_YN
+		,CREATED_DT
+		,CREATED_CD
+		,UPDATED_DT
+		,UPDATED_CD
+		)
+		VALUES
+		(
+		#{userCd}
+		,#{userPw}
+		,#{userNm}
+		,#{userSts}
+		,#{teamCd}
+		,#{userPh}
+		,#{delYn}
+		,NOW()
+		,#{loginUserCd}
+		,NOW()
+		,#{loginUserCd}
+		)
+		ON DUPLICATE KEY UPDATE
+		USER_NM = #{userNm}
+		,USER_STS = #{userSts}
+		,TEAM_CD = #{teamCd}
+		,USER_PH = #{userPh}
+		,UPDATED_DT = NOW()
+		,UPDATED_CD = #{loginUserCd}
 	</update>
 </mapper>
